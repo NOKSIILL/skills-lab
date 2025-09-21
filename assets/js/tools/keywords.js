@@ -642,9 +642,13 @@ function copyKeywords() {
 
   copyToClipboard(keywords.join(", "))
     .then(() => {
-      showCopyNotification("키워드가 복사되었습니다!");
+      showCopyNotification(
+        "키워드가 복사되었습니다!<br>Keywords have been copied!"
+      );
     })
     .catch(() => {
-      alert("복사에 실패했습니다. 다시 시도해주세요.");
+      alert(
+        "복사에 실패했습니다. 다시 시도해주세요.<br>Failed to copy. Please try again."
+      );
     });
 }

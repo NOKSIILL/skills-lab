@@ -12,7 +12,8 @@ function convertUnits() {
   const toUnit = toUnitSelect.value;
 
   if (isNaN(value)) {
-    resultElement.textContent = "올바른 숫자를 입력하세요";
+    resultElement.textContent =
+      "올바른 숫자를 입력하세요.<br>Please enter a valid number.";
     return;
   }
 
@@ -62,17 +63,20 @@ function copyConversionResult() {
   const result = resultElement.textContent;
   if (
     result &&
-    result !== "결과가 여기에 표시됩니다" &&
-    result !== "올바른 숫자를 입력하세요"
+    result !==
+      "결과가 여기에 표시됩니다.<br>The result will be displayed here." &&
+    result !== "올바른 숫자를 입력하세요.<br>Please enter a valid number."
   ) {
     copyToClipboard(result)
       .then(() => {
-        showCopyNotification("변환 결과가 복사되었습니다!");
+        showCopyNotification(
+          "변환 결과가 복사되었습니다!<br>Conversion result copied!"
+        );
       })
       .catch(() => {
-        alert("복사에 실패했습니다.");
+        alert("복사에 실패했습니다.<br>Failed to copy.");
       });
   } else {
-    showCopyNotification("복사할 결과가 없습니다");
+    showCopyNotification("복사할 결과가 없습니다.<br>No result to copy.");
   }
 }

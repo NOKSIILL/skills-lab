@@ -8,7 +8,7 @@ function transformText(type) {
   const input = inputElement.value;
 
   if (!input.trim()) {
-    resultElement.textContent = "텍스트를 입력하세요";
+    resultElement.textContent = "텍스트를 입력하세요.<br>Please enter text.";
     return;
   }
 
@@ -68,18 +68,21 @@ function copyTransformedText() {
   const result = resultElement.textContent;
   if (
     result &&
-    result !== "변환된 텍스트가 여기에 표시됩니다" &&
-    result !== "텍스트를 입력하세요"
+    result !==
+      "변환된 텍스트가 여기에 표시됩니다.<br>Transformed text will appear here." &&
+    result !== "텍스트를 입력하세요.<br>Please enter text."
   ) {
     copyToClipboard(result)
       .then(() => {
-        showCopyNotification("변환된 텍스트가 복사되었습니다!");
+        showCopyNotification(
+          "변환된 텍스트가 복사되었습니다!<br>Transformed text copied!"
+        );
       })
       .catch(() => {
-        alert("복사에 실패했습니다.");
+        alert("복사에 실패했습니다.<br>Failed to copy.");
       });
   } else {
-    showCopyNotification("복사할 텍스트가 없습니다");
+    showCopyNotification("복사할 텍스트가 없습니다.<br>No text to copy.");
   }
 }
 
@@ -90,7 +93,8 @@ function clearTextInput() {
 
   if (inputElement) inputElement.value = "";
   if (resultElement)
-    resultElement.textContent = "변환된 텍스트가 여기에 표시됩니다";
+    resultElement.textContent =
+      "변환된 텍스트가 여기에 표시됩니다.<br>Transformed text will appear here.";
 }
 
 // 텍스트 통계 계산
