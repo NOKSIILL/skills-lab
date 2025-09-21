@@ -22,7 +22,7 @@ class ComponentLoader {
   static async loadHeader() {
     const success = await this.loadComponent(
       "header",
-      "/shared/components/header-ko.html"
+      "/shared/components/headers/header-ko.html"
     );
     if (success) {
       this.initHeaderEvents();
@@ -34,7 +34,7 @@ class ComponentLoader {
   static async loadFooter() {
     const success = await this.loadComponent(
       "footer",
-      "/shared/components/footer-ko.html"
+      "/shared/components/footers/footer-ko.html"
     );
     if (success) {
       this.initFooterEvents();
@@ -45,7 +45,7 @@ class ComponentLoader {
   static async loadGameSidebar() {
     const success = await this.loadComponent(
       "#game-sidebar",
-      "/shared/game-sidebar.html"
+      "/shared/components/sidebars/game-sidebar.html"
     );
     if (success) {
       this.initGameSidebarEvents();
@@ -56,7 +56,7 @@ class ComponentLoader {
   static async loadToolSidebar() {
     const success = await this.loadComponent(
       "#tool-sidebar",
-      "/shared/tool-sidebar.html"
+      "/shared/components/sidebars/tool-sidebar.html"
     );
     if (success) {
       this.initToolSidebarEvents();
