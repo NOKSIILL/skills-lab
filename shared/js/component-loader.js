@@ -45,7 +45,7 @@ class ComponentLoader {
   static async loadGameSidebar() {
     const success = await this.loadComponent(
       "#game-sidebar",
-      "/shared/components/sidebars/game-sidebar.html"
+      "/shared/components/sidebars/game-sidebar-ko.html"
     );
     if (success) {
       this.initGameSidebarEvents();
@@ -56,7 +56,7 @@ class ComponentLoader {
   static async loadToolSidebar() {
     const success = await this.loadComponent(
       "#tool-sidebar",
-      "/shared/components/sidebars/tool-sidebar.html"
+      "/shared/components/sidebars/tool-sidebar-ko.html"
     );
     if (success) {
       this.initToolSidebarEvents();
