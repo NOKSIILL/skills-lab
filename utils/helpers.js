@@ -15,7 +15,9 @@ function hslToHex(h, s, l) {
 }
 
 // 복사 알림 표시
-function showCopyNotification(message = "복사되었습니다!") {
+function showCopyNotification(
+  message = "복사되었습니다!</br>Copied to clipboard!"
+) {
   const notification = document.getElementById("copyNotification");
   if (notification) {
     notification.textContent = message;

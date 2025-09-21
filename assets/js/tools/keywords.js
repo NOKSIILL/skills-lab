@@ -643,12 +643,12 @@ function copyKeywords() {
   copyToClipboard(keywords.join(", "))
     .then(() => {
       showCopyNotification(
-        "키워드가 복사되었습니다!\nKeywords have been copied!"
+        "키워드가 복사되었습니다!Keywords have been copied!"
       );
     })
     .catch(() => {
       alert(
-        "복사에 실패했습니다. 다시 시도해주세요.\nFailed to copy. Please try again."
+        "복사에 실패했습니다. 다시 시도해주세요.Failed to copy. Please try again."
       );
     });
 }

@@ -443,12 +443,16 @@ const DeviceUtils = {
 
 // 향상된 알림 시스템
 function showCopyNotification(message = null, duration = 2000) {
-  /*
   if (!message) {
     message =
-      translations[currentLanguage]?.copyNotification || "복사되었습니다!";
+      translations[currentLanguage]?.copyNotification ||
+      "복사되었습니다!</br>Copied to clipboard!";
   }
-*/
+  const notifi = document.getElementById("notification");
+  if (notifi) {
+    notifi.innerHTML = message; // <br>이 줄바꿈으로 동작
+  }
+
   const existingNotification = document.querySelector(".copy-notification");
   if (existingNotification) {
     existingNotification.remove();
