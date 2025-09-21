@@ -12,7 +12,7 @@ function resetReactionTest() {
   const text = document.getElementById("reactionText");
   if (area && text) {
     area.className = "reaction-area";
-    text.innerHTML = "클릭해서 시작하세요! Click to start!";
+    text.innerHTML = "클릭해서 시작하세요!<br>Click to start!";
     reactionState.isWaiting = false;
   }
 }
