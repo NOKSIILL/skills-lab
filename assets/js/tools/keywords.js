@@ -619,7 +619,7 @@ function generateKeywords() {
   [...selectedNouns, ...selectedAdjectives].forEach((keyword) => {
     const tag = document.createElement("div");
     tag.className = "keyword-tag";
-    tag.textContent = keyword;
+    tag.innerHTML = keyword;
 
     tag.addEventListener("mouseenter", () => {
       tag.style.background = "rgba(0,255,136,0.3)";
@@ -638,7 +638,7 @@ function generateKeywords() {
 // 키워드 복사
 function copyKeywords() {
   const tags = document.querySelectorAll(".keyword-tag");
-  const keywords = Array.from(tags).map((tag) => tag.textContent);
+  const keywords = Array.from(tags).map((tag) => tag.innerHTML);
 
   copyToClipboard(keywords.join(", "))
     .then(() => {

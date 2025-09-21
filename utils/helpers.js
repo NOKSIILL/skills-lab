@@ -20,7 +20,7 @@ function showCopyNotification(
 ) {
   const notification = document.getElementById("copyNotification");
   if (notification) {
-    notification.textContent = message;
+    notification.innerHTML = message;
     notification.style.display = "block";
     setTimeout(() => {
       notification.style.display = "none";

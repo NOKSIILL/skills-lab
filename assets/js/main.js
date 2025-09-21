@@ -460,7 +460,7 @@ function showCopyNotification(message = null, duration = 2000) {
 
   const notification = document.createElement("div");
   notification.className = "copy-notification";
-  notification.textContent = message;
+  notification.innerHTML = message;
 
   if (DeviceUtils.isMobile()) {
     notification.style.top = "auto";

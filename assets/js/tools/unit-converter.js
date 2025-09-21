@@ -12,7 +12,7 @@ function convertUnits() {
   const toUnit = toUnitSelect.value;
 
   if (isNaN(value)) {
-    resultElement.textContent =
+    resultElement.innerHTML =
       "올바른 숫자를 입력하세요.<br>Please enter a valid number.";
     return;
   }
@@ -46,12 +46,12 @@ function convertUnits() {
     displayResult = result.toFixed(4);
   }
 
-  resultElement.textContent = `${displayResult} ${toUnit}`;
+  resultElement.innerHTML = `${displayResult} ${toUnit}`;
 
   // 추가 정보 표시 (픽셀 기준값도 함께 표시)
   if (fromUnit !== "px" && toUnit !== "px") {
     const pxInfo = ` (${pxValue.toFixed(2)}px 기준)`;
-    resultElement.textContent += pxInfo;
+    resultElement.innerHTML += pxInfo;
   }
 }
 
@@ -60,7 +60,7 @@ function copyConversionResult() {
   const resultElement = document.getElementById("conversionResult");
   if (!resultElement) return;
 
-  const result = resultElement.textContent;
+  const result = resultElement.innerHTML;
   if (
     result &&
     result !==

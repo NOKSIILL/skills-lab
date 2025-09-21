@@ -26,7 +26,7 @@ function generateColorPalette() {
 
     const colorCode = document.createElement("div");
     colorCode.className = "color-code";
-    colorCode.textContent = hexColor;
+    colorCode.innerHTML = hexColor;
 
     colorBox.addEventListener("click", () => {
       copyToClipboard(hexColor)

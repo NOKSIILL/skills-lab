@@ -8,7 +8,7 @@ function transformText(type) {
   const input = inputElement.value;
 
   if (!input.trim()) {
-    resultElement.textContent = "텍스트를 입력하세요.<br>Please enter text.";
+    resultElement.innerHTML = "텍스트를 입력하세요.<br>Please enter text.";
     return;
   }
 
@@ -57,7 +57,7 @@ function transformText(type) {
       transformed = input;
   }
 
-  resultElement.textContent = transformed;
+  resultElement.innerHTML = transformed;
 }
 
 // 변환된 텍스트 복사
@@ -65,7 +65,7 @@ function copyTransformedText() {
   const resultElement = document.getElementById("textResult");
   if (!resultElement) return;
 
-  const result = resultElement.textContent;
+  const result = resultElement.innerHTML;
   if (
     result &&
     result !==
@@ -93,7 +93,7 @@ function clearTextInput() {
 
   if (inputElement) inputElement.value = "";
   if (resultElement)
-    resultElement.textContent =
+    resultElement.innerHTML =
       "변환된 텍스트가 여기에 표시됩니다.<br>Transformed text will appear here.";
 }
 

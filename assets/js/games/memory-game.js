@@ -49,7 +49,7 @@ function flipCard(event) {
   }
 
   card.classList.add("flipped");
-  card.textContent = card.dataset.symbol;
+  card.innerHTML = card.dataset.symbol;
   memoryState.flippedCards.push(index);
 
   if (memoryState.flippedCards.length === 2) {
@@ -82,8 +82,8 @@ function flipCard(event) {
       setTimeout(() => {
         firstCard.classList.remove("flipped");
         secondCard.classList.remove("flipped");
-        firstCard.textContent = "";
-        secondCard.textContent = "";
+        firstCard.innerHTML = "";
+        secondCard.innerHTML = "";
         memoryState.flippedCards = [];
       }, 500);
     }
@@ -99,14 +99,14 @@ function updateMemoryStats() {
   const movesElement = document.getElementById("moves");
 
   if (scoreElement) {
-    scoreElement.textContent = memoryState.score;
+    scoreElement.innerHTML = memoryState.score;
   }
 
   if (matchesElement) {
-    matchesElement.textContent = `${memoryState.matches}/8`;
+    matchesElement.innerHTML = `${memoryState.matches}/8`;
   }
 
   if (movesElement) {
-    movesElement.textContent = memoryState.moves;
+    movesElement.innerHTML = memoryState.moves;
   }
 }
