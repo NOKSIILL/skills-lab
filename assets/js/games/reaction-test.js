@@ -47,7 +47,7 @@ function handleReactionClick() {
       reactionState.bestTime = reactionTime;
     }
 
-    text.textContent = `${reactionTime}ms!  클릭해서 다시 시도<br>${reactionTime}ms! Click to try again`;
+    text.textContent = `${reactionTime}ms!  클릭해서 다시 시도\n${reactionTime}ms! Click to try again`;
     area.className = "reaction-area";
     reactionState.isWaiting = false;
 

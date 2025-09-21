@@ -72,9 +72,7 @@ function flipCard(event) {
         if (memoryState.matches === 8) {
           setTimeout(
             () =>
-              alert(
-                "축하합니다! 게임 완료!<br>Congratulations! Game completed!"
-              ),
+              alert("축하합니다! 게임 완료!\nCongratulations! Game completed!"),
             500
           );
         }
