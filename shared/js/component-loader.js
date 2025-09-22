@@ -328,9 +328,9 @@ class ComponentLoader {
       logo.addEventListener("click", (e) => {
         const href = item.getAttribute("href");
         e.preventDefault();
-        if (href.startsWith("/ko/")) {
+        if (href.startsWith("ko/")) {
           window.location.href = "/ko/";
-        } else if (href.startsWith("/en/")) {
+        } else if (href.startsWith("en/")) {
           window.location.href = "/en/";
         } else {
           window.location.href = "/";
