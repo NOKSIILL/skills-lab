@@ -93,7 +93,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 600px;
+  min-height: 500px;
   padding: 40px;
   gap: 30px;
 }
@@ -284,8 +284,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-height: 640px;
-  max-height: 650px;
+  min-height: 550px;
 }
 
 .input-section label,
@@ -358,6 +357,11 @@
     border-right: none;
     border-bottom: 1px solid rgba(0, 255, 136, 0.3);
     margin: 0 -15px 20px -15px;
+  }
+
+  .text-transformer-form {
+    min-height: 640px;
+    max-height: calc(100vh - 350px);
   }
 
   .tools-container .ad-sidebar {
