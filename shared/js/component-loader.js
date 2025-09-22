@@ -20,10 +20,19 @@ class ComponentLoader {
   }
 
   static async loadHeader() {
-    const success = await this.loadComponent(
-      "header",
-      "/shared/components/headers/header-ko.html"
-    );
+    const pathname = window.location.pathname;
+    let success;
+    if (pathname.startsWith("/ko/")) {
+      success = await this.loadComponent(
+        "header",
+        "/shared/components/headers/header-ko.html"
+      );
+    } else {
+      success = await this.loadComponent(
+        "header",
+        "/shared/components/headers/header-en.html"
+      );
+    }
     if (success) {
       this.initHeaderEvents();
       this.setActiveNavigation();
@@ -38,23 +47,12 @@ class ComponentLoader {
         "footer",
         "/shared/components/footers/footer-ko.html"
       );
-    } else if (pathname.startsWith("/en/")) {
+    } else {
       const success = await this.loadComponent(
         "footer",
         "/shared/components/footers/footer-en.html"
       );
-    } else {
-      const success = await this.loadComponent(
-        "footer",
-        "/shared/components/footers/footer-ko.html"
-      );
     }
-    /*
-    const success = await this.loadComponent(
-      "footer",
-      "/shared/components/footers/footer-ko.html"
-    );
-    */
     if (success) {
       this.initFooterEvents();
     }
