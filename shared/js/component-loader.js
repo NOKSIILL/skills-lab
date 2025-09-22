@@ -384,17 +384,14 @@ class ComponentLoader {
         if (game) {
           //window.location.href = `/ko/games/${game}.html`;
 
-          game.addEventListener("click", (e) => {
-            e.preventDefault();
-            const pathname = window.location.pathname;
-            if (pathname.startsWith("/ko/")) {
-              window.location.href = `/ko/games/${game}.html`;
-            } else if (pathname.startsWith("/en/")) {
-              window.location.href = `/en/games/${game}.html`;
-            } else {
-              window.location.href = "/";
-            }
-          });
+          const pathname = window.location.pathname;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/games/${game}.html`;
+          } else if (pathname.startsWith("/en/")) {
+            window.location.href = `/en/games/${game}.html`;
+          } else {
+            window.location.href = "/";
+          }
         }
       });
     });
@@ -410,17 +407,14 @@ class ComponentLoader {
         if (tool) {
           //window.location.href = `/ko/tools/${tool}.html`;
 
-          logo.addEventListener("click", (e) => {
-            e.preventDefault();
-            const pathname = window.location.pathname;
-            if (pathname.startsWith("/ko/")) {
-              window.location.href = `/ko/tools/${tool}.html`;
-            } else if (pathname.startsWith("/en/")) {
-              window.location.href = `/en/tools/${tool}.html`;
-            } else {
-              window.location.href = "/";
-            }
-          });
+          const pathname = window.location.pathname;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/tools/${tool}.html`;
+          } else if (pathname.startsWith("/en/")) {
+            window.location.href = `/en/tools/${tool}.html`;
+          } else {
+            window.location.href = "/";
+          }
         }
       });
     });
@@ -433,35 +427,32 @@ class ComponentLoader {
     document.querySelectorAll(".nav-item").forEach((item) => {
       item.classList.remove("active");
       const href = item.getAttribute("href");
-      e.preventDefault();
+      const pathname = window.location.pathname;
 
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        const pathname = window.location.pathname;
-        if (pathname.startsWith("/ko/")) {
-          href === currentPath ||
-            (currentPath === "/" && href === "/") ||
-            (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
-            (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
-            (currentPath.includes("/ko/about") &&
-              href === "/ko/about/about.html") ||
-            ((currentPath === "/ko/about/about.html" ||
-              currentPath === "/ko/about/about") &&
-              (href === "/ko/about/about.html" || href === "/ko/about/about"));
-        } else if (pathname.startsWith("/en/")) {
-          href === currentPath ||
-            (currentPath === "/" && href === "/") ||
-            (currentPath.startsWith("/en/games") && href === "/en/games/") ||
-            (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
-            (currentPath.includes("/en/about") &&
-              href === "/en/about/about.html") ||
-            ((currentPath === "/en/about/about.html" ||
-              currentPath === "/en/about/about") &&
-              (href === "/en/about/about.html" || href === "/en/about/about"));
-        } else {
-          item.classList.add("active");
-        }
-      });
+      e.preventDefault();
+      if (pathname.startsWith("/ko/")) {
+        href === currentPath ||
+          (currentPath === "/" && href === "/") ||
+          (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
+          (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
+          (currentPath.includes("/ko/about") &&
+            href === "/ko/about/about.html") ||
+          ((currentPath === "/ko/about/about.html" ||
+            currentPath === "/ko/about/about") &&
+            (href === "/ko/about/about.html" || href === "/ko/about/about"));
+      } else if (pathname.startsWith("/en/")) {
+        href === currentPath ||
+          (currentPath === "/" && href === "/") ||
+          (currentPath.startsWith("/en/games") && href === "/en/games/") ||
+          (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
+          (currentPath.includes("/en/about") &&
+            href === "/en/about/about.html") ||
+          ((currentPath === "/en/about/about.html" ||
+            currentPath === "/en/about/about") &&
+            (href === "/en/about/about.html" || href === "/en/about/about"));
+      } else {
+        item.classList.add("active");
+      }
 
       /*
       if (
