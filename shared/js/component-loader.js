@@ -358,12 +358,13 @@ class ComponentLoader {
         const page = item.dataset.page;
         if (page) {
           //window.location.href = `/ko/about/${page}.html`;
+
           page.addEventListener("click", (e) => {
-            const href = item.getAttribute("href");
             e.preventDefault();
-            if (href.startsWith("/ko/")) {
+            const pathname = window.location.pathname;
+            if (pathname.startsWith("/ko/")) {
               window.location.href = `/ko/about/${page}.html`;
-            } else if (href.startsWith("/en/")) {
+            } else if (pathname.startsWith("/en/")) {
               window.location.href = `/en/about/${page}.html`;
             } else {
               window.location.href = "/";
@@ -379,18 +380,21 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const game = item.dataset.game;
-        const href = item.getAttribute("href");
         console.log("Game sidebar item clicked:", game);
         if (game) {
           //window.location.href = `/ko/games/${game}.html`;
 
-          if (href.startsWith("/ko/")) {
-            window.location.href = `/ko/games/${game}.html`;
-          } else if (href.startsWith("/en/")) {
-            window.location.href = `/en/games/${game}.html`;
-          } else {
-            window.location.href = "/";
-          }
+          game.addEventListener("click", (e) => {
+            e.preventDefault();
+            const pathname = window.location.pathname;
+            if (pathname.startsWith("/ko/")) {
+              window.location.href = `/ko/games/${game}.html`;
+            } else if (pathname.startsWith("/en/")) {
+              window.location.href = `/en/games/${game}.html`;
+            } else {
+              window.location.href = "/";
+            }
+          });
         }
       });
     });
@@ -402,18 +406,21 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const tool = item.dataset.tool;
-        const href = item.getAttribute("href");
         console.log("Tool sidebar item clicked:", tool);
         if (tool) {
           //window.location.href = `/ko/tools/${tool}.html`;
 
-          if (href.startsWith("/ko/")) {
-            window.location.href = `/ko/tools/${tool}.html`;
-          } else if (href.startsWith("/en/")) {
-            window.location.href = `/en/tools/${tool}.html`;
-          } else {
-            window.location.href = "/";
-          }
+          logo.addEventListener("click", (e) => {
+            e.preventDefault();
+            const pathname = window.location.pathname;
+            if (pathname.startsWith("/ko/")) {
+              window.location.href = `/ko/tools/${tool}.html`;
+            } else if (pathname.startsWith("/en/")) {
+              window.location.href = `/en/tools/${tool}.html`;
+            } else {
+              window.location.href = "/";
+            }
+          });
         }
       });
     });
@@ -426,7 +433,35 @@ class ComponentLoader {
     document.querySelectorAll(".nav-item").forEach((item) => {
       item.classList.remove("active");
       const href = item.getAttribute("href");
-      //console.log("Checking nav item:", href); // 디버깅
+      e.preventDefault();
+
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        const pathname = window.location.pathname;
+        if (pathname.startsWith("/ko/")) {
+          href === currentPath ||
+            (currentPath === "/" && href === "/") ||
+            (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
+            (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
+            (currentPath.includes("/ko/about") &&
+              href === "/ko/about/about.html") ||
+            ((currentPath === "/ko/about/about.html" ||
+              currentPath === "/ko/about/about") &&
+              (href === "/ko/about/about.html" || href === "/ko/about/about"));
+        } else if (pathname.startsWith("/en/")) {
+          href === currentPath ||
+            (currentPath === "/" && href === "/") ||
+            (currentPath.startsWith("/en/games") && href === "/en/games/") ||
+            (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
+            (currentPath.includes("/en/about") &&
+              href === "/en/about/about.html") ||
+            ((currentPath === "/en/about/about.html" ||
+              currentPath === "/en/about/about") &&
+              (href === "/en/about/about.html" || href === "/en/about/about"));
+        } else {
+          item.classList.add("active");
+        }
+      });
 
       /*
       if (
@@ -445,42 +480,15 @@ class ComponentLoader {
         //console.log("Activated nav item:", href); // 디버깅
       }
 */
-
-      //e.preventDefault();
-      if (href.startsWith("/ko/")) {
-        href === currentPath ||
-          (currentPath === "/" && href === "/") ||
-          (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
-          (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
-          (currentPath.includes("/ko/about") &&
-            href === "/ko/about/about.html") ||
-          //about 경로를 유연하게 매칭
-          ((currentPath === "/ko/about/about.html" ||
-            currentPath === "/ko/about/about") &&
-            (href === "/ko/about/about.html" || href === "/ko/about/about"));
-      } else if (href.startsWith("/en/")) {
-        href === currentPath ||
-          (currentPath === "/" && href === "/") ||
-          (currentPath.startsWith("/en/games") && href === "/en/games/") ||
-          (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
-          (currentPath.includes("/en/about") &&
-            href === "/en/about/about.html") ||
-          //about 경로를 유연하게 매칭
-          ((currentPath === "/en/about/about.html" ||
-            currentPath === "/en/about/about") &&
-            (href === "/en/about/about.html" || href === "/en/about/about"));
-      } else {
-        item.classList.add("active");
-        //console.log("Activated nav item:", href); // 디버깅
-      }
     });
   }
-  /*
-  about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
+
+  /* 
+  //about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
   (currentPath.startsWith("/about/") && href === "/about/about.html")
   */
   /* 
-  푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
+  //푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
   (currentPath === "/about/about.html" && href === "/about/about.html")
   */
 
