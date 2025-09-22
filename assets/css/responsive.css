@@ -580,6 +580,10 @@ body {
     font-size: 22px;
   }
 
+  .logo-text {
+    font-size: 22px;
+  }
+
   .nav-menu {
     gap: 20px;
   }
@@ -761,6 +765,10 @@ body {
   }
 
   .logo {
+    font-size: 20px;
+  }
+
+  .logo-text {
     font-size: 20px;
   }
 
@@ -965,6 +973,10 @@ body {
   }
 
   .logo {
+    font-size: 18px;
+  }
+
+  .logo-text {
     font-size: 18px;
   }
 
