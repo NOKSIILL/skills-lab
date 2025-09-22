@@ -337,6 +337,8 @@
 
   .tools-container .ad-sidebar {
     display: none !important;
+
+    order: 2;
   }
 }
 
@@ -355,5 +357,6 @@
 
   .tools-container .ad-sidebar {
     display: none !important;
+    order: 2;
   }
 }

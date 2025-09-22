@@ -563,6 +563,7 @@ body {
   .tools-container {
     display: block !important;
     width: 100%;
+    margin-bottom: 3px;
   }
 
   .game-content,
@@ -919,6 +920,7 @@ body {
   }
 
   .tool-area {
+    min-height: 540px;
     max-height: 550px;
   }
   .transform-buttons {
