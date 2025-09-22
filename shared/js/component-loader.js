@@ -357,7 +357,18 @@ class ComponentLoader {
         e.preventDefault();
         const page = item.dataset.page;
         if (page) {
-          window.location.href = `/ko/about/${page}.html`;
+          //window.location.href = `/ko/about/${page}.html`;
+          page.addEventListener("click", (e) => {
+            const href = item.getAttribute("href");
+            e.preventDefault();
+            if (href.startsWith("/ko/")) {
+              window.location.href = `/ko/about/${page}.html`;
+            } else if (href.startsWith("/en/")) {
+              window.location.href = `/en/about/${page}.html`;
+            } else {
+              window.location.href = "/";
+            }
+          });
         }
       });
     });
@@ -370,7 +381,18 @@ class ComponentLoader {
         const game = item.dataset.game;
         console.log("Game sidebar item clicked:", game);
         if (game) {
-          window.location.href = `/ko/games/${game}.html`;
+          //window.location.href = `/ko/games/${game}.html`;
+          game.addEventListener("click", (e) => {
+            const href = item.getAttribute("href");
+            e.preventDefault();
+            if (href.startsWith("/ko/")) {
+              window.location.href = `/ko/games/${game}.html`;
+            } else if (href.startsWith("/en/")) {
+              window.location.href = `/en/games/${game}.html`;
+            } else {
+              window.location.href = "/";
+            }
+          });
         }
       });
     });
@@ -384,7 +406,18 @@ class ComponentLoader {
         const tool = item.dataset.tool;
         console.log("Tool sidebar item clicked:", tool);
         if (tool) {
-          window.location.href = `/ko/tools/${tool}.html`;
+          //window.location.href = `/ko/tools/${tool}.html`;
+          tool.addEventListener("click", (e) => {
+            const href = item.getAttribute("href");
+            e.preventDefault();
+            if (href.startsWith("/ko/")) {
+              window.location.href = `/ko/tools/${tool}.html`;
+            } else if (href.startsWith("/en/")) {
+              window.location.href = `/en/tools/${tool}.html`;
+            } else {
+              window.location.href = "/";
+            }
+          });
         }
       });
     });
@@ -406,10 +439,6 @@ class ComponentLoader {
         (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
         (currentPath.includes("/ko/about") &&
           href === "/ko/about/about.html") ||
-        // about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
-        //(currentPath.startsWith("/about/") && href === "/about/about.html")
-        // 푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
-        //(currentPath === "/about/about.html" && href === "/about/about.html")
         //about 경로를 유연하게 매칭
         ((currentPath === "/ko/about/about.html" ||
           currentPath === "/ko/about/about") &&
@@ -420,6 +449,14 @@ class ComponentLoader {
       }
     });
   }
+  /*
+  about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
+  (currentPath.startsWith("/about/") && href === "/about/about.html")
+  */
+  /* 
+  푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
+  (currentPath === "/about/about.html" && href === "/about/about.html")
+  */
 
   static setActiveGameSidebar(gameId) {
     setTimeout(() => {
