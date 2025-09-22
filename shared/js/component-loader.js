@@ -368,10 +368,10 @@ class ComponentLoader {
       logo.addEventListener("click", (e) => {
         e.preventDefault();
         const pathname = window.location.pathname;
-        if (pathname.startsWith("/en/")) {
-          window.location.href = "/en/";
-        } else if (pathname.startsWith("/ko/")) {
+        if (pathname.startsWith("/ko/")) {
           window.location.href = "/ko/";
+        } else if (pathname.startsWith("/en/")) {
+          window.location.href = "/en/";
         } else {
           window.location.href = "/";
         }
@@ -396,20 +396,15 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const page = item.dataset.page;
+        const pathname = window.location.pathname;
         if (page) {
           //window.location.href = `/ko/about/${page}.html`;
 
-          page.addEventListener("click", (e) => {
-            e.preventDefault();
-            const pathname = window.location.pathname;
-            if (pathname.startsWith("/ko/")) {
-              window.location.href = `/ko/about/${page}.html`;
-            } else if (pathname.startsWith("/en/")) {
-              window.location.href = `/en/about/${page}.html`;
-            } else {
-              window.location.href = "/";
-            }
-          });
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/about/${page}.html`;
+          } else {
+            window.location.href = `/en/about/${page}.html`;
+          }
         }
       });
     });
@@ -420,17 +415,15 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const game = item.dataset.game;
+        const pathname = window.location.pathname;
         console.log("Game sidebar item clicked:", game);
         if (game) {
           //window.location.href = `/ko/games/${game}.html`;
 
-          const pathname = window.location.pathname;
           if (pathname.startsWith("/ko/")) {
             window.location.href = `/ko/games/${game}.html`;
-          } else if (pathname.startsWith("/en/")) {
-            window.location.href = `/en/games/${game}.html`;
           } else {
-            window.location.href = "/";
+            window.location.href = `/en/games/${game}.html`;
           }
         }
       });
@@ -443,17 +436,15 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const tool = item.dataset.tool;
+        const pathname = window.location.pathname;
         console.log("Tool sidebar item clicked:", tool);
         if (tool) {
           //window.location.href = `/ko/tools/${tool}.html`;
 
-          const pathname = window.location.pathname;
           if (pathname.startsWith("/ko/")) {
             window.location.href = `/ko/tools/${tool}.html`;
-          } else if (pathname.startsWith("/en/")) {
-            window.location.href = `/en/tools/${tool}.html`;
           } else {
-            window.location.href = "/";
+            window.location.href = `/en/tools/${tool}.html`;
           }
         }
       });
@@ -469,7 +460,6 @@ class ComponentLoader {
       const href = item.getAttribute("href");
       const pathname = window.location.pathname;
 
-      e.preventDefault();
       if (pathname.startsWith("/ko/")) {
         href === currentPath ||
           (currentPath === "/" && href === "/") ||
