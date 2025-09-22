@@ -922,9 +922,10 @@ body {
     max-height: 550px;
   }
 
-  .tool-button {
-    font-size: 13px;
-    padding: 10px;
+  .tranform-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-size: 14px;
   }
 
   /* 푸터 모바일에서 2x2 */
