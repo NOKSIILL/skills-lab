@@ -335,10 +335,6 @@
     order: 1;
   }
 
-  .tool-content {
-    order: 2;
-  }
-
   .tools-container .ad-sidebar {
     display: none !important;
   }
@@ -355,11 +351,6 @@
     border-right: none;
     border-bottom: 1px solid rgba(0, 255, 136, 0.3);
     margin: 0 -15px 20px -15px;
-  }
-
-  .tool-content {
-    order: 2;
-    width: 100%;
   }
 
   .tools-container .ad-sidebar {
