@@ -32,10 +32,29 @@ class ComponentLoader {
   }
 
   static async loadFooter() {
+    const pathname = window.location.pathname;
+    if (pathname.startsWith("/ko/")) {
+      const success = await this.loadComponent(
+        "footer",
+        "/shared/components/footers/footer-ko.html"
+      );
+    } else if (pathname.startsWith("/en/")) {
+      const success = await this.loadComponent(
+        "footer",
+        "/shared/components/footers/footer-en.html"
+      );
+    } else {
+      const success = await this.loadComponent(
+        "footer",
+        "/shared/components/footers/footer-ko.html"
+      );
+    }
+    /*
     const success = await this.loadComponent(
       "footer",
       "/shared/components/footers/footer-ko.html"
     );
+    */
     if (success) {
       this.initFooterEvents();
     }
@@ -43,10 +62,31 @@ class ComponentLoader {
   }
 
   static async loadGameSidebar() {
+    const pathname = window.location.pathname;
+    if (pathname.startsWith("/ko/")) {
+      const success = await this.loadComponent(
+        "#game-sidebar",
+        "/shared/components/sidebars/game-sidebar-ko.html"
+      );
+    } else if (pathname.startsWith("/en/")) {
+      const success = await this.loadComponent(
+        "#game-sidebar",
+        "/shared/components/sidebars/game-sidebar-en.html"
+      );
+    } else {
+      const success = await this.loadComponent(
+        "#game-sidebar",
+        "/shared/components/sidebars/game-sidebar-ko.html"
+      );
+    }
+
+    /*
     const success = await this.loadComponent(
       "#game-sidebar",
       "/shared/components/sidebars/game-sidebar-ko.html"
     );
+    */
+
     if (success) {
       this.initGameSidebarEvents();
     }
