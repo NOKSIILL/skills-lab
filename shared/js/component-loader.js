@@ -68,24 +68,12 @@ class ComponentLoader {
         "#game-sidebar",
         "/shared/components/sidebars/game-sidebar-ko.html"
       );
-    } else if (pathname.startsWith("/en/")) {
+    } else {
       const success = await this.loadComponent(
         "#game-sidebar",
         "/shared/components/sidebars/game-sidebar-en.html"
       );
-    } else {
-      const success = await this.loadComponent(
-        "#game-sidebar",
-        "/shared/components/sidebars/game-sidebar-ko.html"
-      );
     }
-
-    /*
-    const success = await this.loadComponent(
-      "#game-sidebar",
-      "/shared/components/sidebars/game-sidebar-ko.html"
-    );
-    */
 
     if (success) {
       this.initGameSidebarEvents();
@@ -94,10 +82,19 @@ class ComponentLoader {
   }
 
   static async loadToolSidebar() {
-    const success = await this.loadComponent(
-      "#tool-sidebar",
-      "/shared/components/sidebars/tool-sidebar-ko.html"
-    );
+    const pathname = window.location.pathname;
+    if (pathname.startsWith("/ko/")) {
+      const success = await this.loadComponent(
+        "#tool-sidebar",
+        "/shared/components/sidebars/tool-sidebar-ko.html"
+      );
+    } else {
+      const success = await this.loadComponent(
+        "#tool-sidebar",
+        "/shared/components/sidebars/tool-sidebar-en.html"
+      );
+    }
+
     if (success) {
       this.initToolSidebarEvents();
     }
@@ -460,8 +457,10 @@ class ComponentLoader {
       const href = item.getAttribute("href");
       const pathname = window.location.pathname;
 
+      let isActive = false;
       if (pathname.startsWith("/ko/")) {
-        href === currentPath ||
+        isActive =
+          href === currentPath ||
           (currentPath === "/" && href === "/") ||
           (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
           (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
@@ -471,7 +470,8 @@ class ComponentLoader {
             currentPath === "/ko/about/about") &&
             (href === "/ko/about/about.html" || href === "/ko/about/about"));
       } else if (pathname.startsWith("/en/")) {
-        href === currentPath ||
+        isActive =
+          href === currentPath ||
           (currentPath === "/" && href === "/") ||
           (currentPath.startsWith("/en/games") && href === "/en/games/") ||
           (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
@@ -481,6 +481,10 @@ class ComponentLoader {
             currentPath === "/en/about/about") &&
             (href === "/en/about/about.html" || href === "/en/about/about"));
       } else {
+        isActive = href === currentPath;
+      }
+
+      if (isActive) {
         item.classList.add("active");
       }
 
