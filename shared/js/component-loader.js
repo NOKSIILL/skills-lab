@@ -42,6 +42,7 @@ class ComponentLoader {
 
   static async loadFooter() {
     const pathname = window.location.pathname;
+    let success;
     if (pathname.startsWith("/ko/")) {
       const success = await this.loadComponent(
         "footer",
@@ -61,6 +62,7 @@ class ComponentLoader {
 
   static async loadGameSidebar() {
     const pathname = window.location.pathname;
+    let success;
     if (pathname.startsWith("/ko/")) {
       const success = await this.loadComponent(
         "#game-sidebar",
@@ -81,6 +83,7 @@ class ComponentLoader {
 
   static async loadToolSidebar() {
     const pathname = window.location.pathname;
+    let success;
     if (pathname.startsWith("/ko/")) {
       const success = await this.loadComponent(
         "#tool-sidebar",
