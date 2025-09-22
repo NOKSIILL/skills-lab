@@ -349,6 +349,7 @@
 @media (max-width: 767px) {
   .tools-container {
     flex-direction: column;
+    min-height: 600px;
   }
 
   .tools-container .sidebar {
@@ -358,11 +359,11 @@
     border-bottom: 1px solid rgba(0, 255, 136, 0.3);
     margin: 0 -15px 20px -15px;
   }
-
+  /*
   .text-transformer-form {
     min-height: 670px;
     max-height: 680px;
-  }
+  }*/
 
   .tools-container .ad-sidebar {
     display: none !important;
