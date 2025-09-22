@@ -924,6 +924,7 @@ body {
 
   .tool-button {
     font-size: 13px;
+    padding: 10px;
   }
 
   /* 푸터 모바일에서 2x2 */
