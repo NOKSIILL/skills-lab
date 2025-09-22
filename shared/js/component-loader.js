@@ -432,6 +432,7 @@ class ComponentLoader {
       const href = item.getAttribute("href");
       //console.log("Checking nav item:", href); // 디버깅
 
+      /*
       if (
         href === currentPath ||
         (currentPath === "/" && href === "/") ||
@@ -447,6 +448,50 @@ class ComponentLoader {
         item.classList.add("active");
         //console.log("Activated nav item:", href); // 디버깅
       }
+*/
+
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const page = item.dataset.page;
+        if (page) {
+          page.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (href.startsWith("/ko/")) {
+              href === currentPath ||
+                (currentPath === "/" && href === "/") ||
+                (currentPath.startsWith("/ko/games") &&
+                  href === "/ko/games/") ||
+                (currentPath.startsWith("/ko/tools") &&
+                  href === "/ko/tools/") ||
+                (currentPath.includes("/ko/about") &&
+                  href === "/ko/about/about.html") ||
+                //about 경로를 유연하게 매칭
+                ((currentPath === "/ko/about/about.html" ||
+                  currentPath === "/ko/about/about") &&
+                  (href === "/ko/about/about.html" ||
+                    href === "/ko/about/about"));
+            } else if (href.startsWith("/en/")) {
+              href === currentPath ||
+                (currentPath === "/" && href === "/") ||
+                (currentPath.startsWith("/en/games") &&
+                  href === "/en/games/") ||
+                (currentPath.startsWith("/en/tools") &&
+                  href === "/en/tools/") ||
+                (currentPath.includes("/en/about") &&
+                  href === "/en/about/about.html") ||
+                //about 경로를 유연하게 매칭
+                ((currentPath === "/en/about/about.html" ||
+                  currentPath === "/en/about/about") &&
+                  (href === "/en/about/about.html" ||
+                    href === "/en/about/about"));
+            } else {
+              item.classList.add("active");
+              //console.log("Activated nav item:", href); // 디버깅
+            }
+          });
+        }
+      });
     });
   }
   /*
