@@ -379,20 +379,18 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const game = item.dataset.game;
+        const href = item.getAttribute("href");
         console.log("Game sidebar item clicked:", game);
         if (game) {
           //window.location.href = `/ko/games/${game}.html`;
-          game.addEventListener("click", (e) => {
-            const href = item.getAttribute("href");
-            e.preventDefault();
-            if (href.startsWith("/ko/")) {
-              window.location.href = `/ko/games/${game}.html`;
-            } else if (href.startsWith("/en/")) {
-              window.location.href = `/en/games/${game}.html`;
-            } else {
-              window.location.href = "/";
-            }
-          });
+
+          if (href.startsWith("/ko/")) {
+            window.location.href = `/ko/games/${game}.html`;
+          } else if (href.startsWith("/en/")) {
+            window.location.href = `/en/games/${game}.html`;
+          } else {
+            window.location.href = "/";
+          }
         }
       });
     });
@@ -404,20 +402,18 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const tool = item.dataset.tool;
+        const href = item.getAttribute("href");
         console.log("Tool sidebar item clicked:", tool);
         if (tool) {
           //window.location.href = `/ko/tools/${tool}.html`;
-          tool.addEventListener("click", (e) => {
-            const href = item.getAttribute("href");
-            e.preventDefault();
-            if (href.startsWith("/ko/")) {
-              window.location.href = `/ko/tools/${tool}.html`;
-            } else if (href.startsWith("/en/")) {
-              window.location.href = `/en/tools/${tool}.html`;
-            } else {
-              window.location.href = "/";
-            }
-          });
+
+          if (href.startsWith("/ko/")) {
+            window.location.href = `/ko/tools/${tool}.html`;
+          } else if (href.startsWith("/en/")) {
+            window.location.href = `/en/tools/${tool}.html`;
+          } else {
+            window.location.href = "/";
+          }
         }
       });
     });
@@ -450,7 +446,7 @@ class ComponentLoader {
       }
 */
 
-      e.preventDefault();
+      //e.preventDefault();
       if (href.startsWith("/ko/")) {
         href === currentPath ||
           (currentPath === "/" && href === "/") ||
