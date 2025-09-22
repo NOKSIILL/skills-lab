@@ -921,8 +921,7 @@ body {
   .tool-area {
     max-height: 550px;
   }
-
-  .tranform-buttons {
+  .transform-buttons {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     font-size: 14px;
