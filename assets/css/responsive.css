@@ -920,9 +920,14 @@ body {
   }
 
   .tool-area {
-    min-height: 540px;
-    max-height: 550px;
+    min-height: 550px;
   }
+
+  .text-transformer-form {
+    min-height: 600px;
+    max-height: 650px;
+  }
+
   .transform-buttons {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
