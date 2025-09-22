@@ -922,6 +922,10 @@ body {
     max-height: 550px;
   }
 
+  .tool-button {
+    font-size: 13px;
+  }
+
   /* 푸터 모바일에서 2x2 */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
