@@ -327,11 +327,11 @@ class ComponentLoader {
     if (logo) {
       logo.addEventListener("click", (e) => {
         e.preventDefault();
-        const href = logo.getAttribute("href") || "";
-        if (href.startsWith("/ko/")) {
-          window.location.href = "/ko/";
-        } else if (href.startsWith("/en/")) {
+        const pathname = window.location.pathname;
+        if (pathname.startsWith("/en/")) {
           window.location.href = "/en/";
+        } else if (pathname.startsWith("/ko/")) {
+          window.location.href = "/ko/";
         } else {
           window.location.href = "/";
         }
