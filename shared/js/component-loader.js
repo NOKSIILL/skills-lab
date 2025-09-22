@@ -152,29 +152,53 @@ class ComponentLoader {
 
     const mobileSidebar = document.createElement("div");
     mobileSidebar.className = "sidebar-mobile";
-
+    const pathname = window.location.pathname;
     let sidebarContent = "";
 
     if (pageType === "games") {
-      sidebarContent = `
+      if (pathname.startsWith("/en/")) {
+        sidebarContent = `
+        <h3>🎯 Game List</h3>
+        <ul class="game-list">
+          <li class="game-item" data-game="fps-aim">🎯 FPS Aim Trainer</li>
+          <li class="game-item" data-game="reaction-test">🎲 Reaction Test</li>
+          <li class="game-item" data-game="memory-game">🎪 Memory Game</li>
+          <li class="game-item" data-game="color-match">🎨 Color Match</li>
+        </ul>
+      `;
+      } else {
+        sidebarContent = `
         <h3>🎯 게임 목록</h3>
         <ul class="game-list">
-          <li class="game-item" data-game="fps-aim" >🎯 FPS 에임 훈련</li>
-          <li class="game-item" data-game="reaction-test" >🎲 반응속도 테스트</li>
-          <li class="game-item" data-game="memory-game" >🎪 메모리 게임</li>
-          <li class="game-item" data-game="color-match" >🎨 색깔 맞추기</li>
+          <li class="game-item" data-game="fps-aim">🎯 FPS 에임 훈련</li>
+          <li class="game-item" data-game="reaction-test">🎲 반응속도 테스트</li>
+          <li class="game-item" data-game="memory-game">🎪 메모리 게임</li>
+          <li class="game-item" data-game="color-match">🎨 색깔 맞추기</li>
         </ul>
       `;
+      }
     } else if (pageType === "tools") {
-      sidebarContent = `
+      if (pathname.startsWith("/en/")) {
+        sidebarContent = `
+        <h3>🛠️ Tools</h3>
+        <ul class="tool-list">
+          <li class="tool-item" data-tool="color-palette">🎨 Color Palette Generator</li>
+          <li class="tool-item" data-tool="keywords">💡 Today's Keywords</li>
+          <li class="tool-item" data-tool="unit-converter">📏 Unit Converter</li>
+          <li class="tool-item" data-tool="text-transformer">🔤 Text Transformer</li>
+        </ul>
+      `;
+      } else {
+        sidebarContent = `
         <h3>🛠️ 도구 목록</h3>
         <ul class="tool-list">
-          <li class="tool-item" data-tool="color-palette" >🎨 색상 팔레트 생성기</li>
-          <li class="tool-item" data-tool="keywords" >💡 오늘의 키워드</li>
+          <li class="tool-item" data-tool="color-palette">🎨 색상 팔레트 생성기</li>
+          <li class="tool-item" data-tool="keywords">💡 오늘의 키워드</li>
           <li class="tool-item" data-tool="unit-converter">📏 단위 변환기</li>
-          <li class="tool-item" data-tool="text-transformer" >🔤 텍스트 변환기</li>
+          <li class="tool-item" data-tool="text-transformer">🔤 텍스트 변환기</li>
         </ul>
       `;
+      }
     }
 
     mobileSidebar.innerHTML = sidebarContent;
@@ -301,6 +325,7 @@ class ComponentLoader {
   }
 
   static initMobileGameSidebarEvents() {
+    const pathname = window.location.pathname;
     document.querySelectorAll(".sidebar-mobile .game-item").forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -309,14 +334,18 @@ class ComponentLoader {
         if (game) {
           // 사이드바 닫기
           this.closeSidebar();
-          // 페이지 이동
-          window.location.href = `/ko/games/${game}.html`;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/games/${game}.html`;
+          } else {
+            window.location.href = `/en/games/${game}.html`;
+          }
         }
       });
     });
   }
 
   static initMobileToolSidebarEvents() {
+    const pathname = window.location.pathname;
     document.querySelectorAll(".sidebar-mobile .tool-item").forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -325,8 +354,11 @@ class ComponentLoader {
         if (tool) {
           // 사이드바 닫기
           this.closeSidebar();
-          // 페이지 이동
-          window.location.href = `/ko/tools/${tool}.html`;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/tools/${tool}.html`;
+          } else {
+            window.location.href = `/en/tools/${tool}.html`;
+          }
         }
       });
     });
