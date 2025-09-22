@@ -44,12 +44,12 @@ class ComponentLoader {
     const pathname = window.location.pathname;
     let success;
     if (pathname.startsWith("/ko/")) {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "footer",
         "/shared/components/footers/footer-ko.html"
       );
     } else {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "footer",
         "/shared/components/footers/footer-en.html"
       );
@@ -64,12 +64,12 @@ class ComponentLoader {
     const pathname = window.location.pathname;
     let success;
     if (pathname.startsWith("/ko/")) {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "#game-sidebar",
         "/shared/components/sidebars/game-sidebar-ko.html"
       );
     } else {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "#game-sidebar",
         "/shared/components/sidebars/game-sidebar-en.html"
       );
@@ -85,12 +85,12 @@ class ComponentLoader {
     const pathname = window.location.pathname;
     let success;
     if (pathname.startsWith("/ko/")) {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "#tool-sidebar",
         "/shared/components/sidebars/tool-sidebar-ko.html"
       );
     } else {
-      const success = await this.loadComponent(
+      success = await this.loadComponent(
         "#tool-sidebar",
         "/shared/components/sidebars/tool-sidebar-en.html"
       );
