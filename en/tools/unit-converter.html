@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Converter - Onggeulda Skills Lab</title>
-    <meta name="description" content="디자인 작업용 다양한 단위 변환 도구" />
+    <meta
+      name="description"
+      content="Various unit conversion tools for design work"
+    />
     <meta
       name="keywords"
-      content="단위 변환기, 픽셀 변환, 디자인 도구, 단위 계산, px pt em rem"
+      content="unit converter, pixel conversion, design tools, unit calculator, px pt em rem in cm mm, web design tools"
     />
 
     <meta property="og:title" content="Unit Converter - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="디자인 작업용 다양한 단위 변환 도구"
+      content="Various unit conversion tools for design work"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -42,16 +45,16 @@
 
           <div class="tool-area">
             <div class="tool-instructions">
-              <h2>디자인 단위 변환기</h2>
+              <h2>Design Unit Converter</h2>
               <p>
-                픽셀, 포인트, 인치, 센티미터 등 다양한 단위를 쉽게 변환하세요.
-                웹 디자인과 인쇄물 작업에 필수적인 도구입니다.
+                Easily convert between pixels, points, inches, centimeters and
+                more. An essential tool for web design and print work.
               </p>
             </div>
             <div class="unit-converter-form">
               <div class="conversion-row">
                 <div class="input-group">
-                  <label>변환할 값</label>
+                  <label>Value to Convert</label>
                   <input
                     type="number"
                     id="inputValue"
@@ -60,50 +63,50 @@
                 </div>
                 <div class="arrow">→</div>
                 <div class="result-group">
-                  <label>결과</label>
-                  <div id="conversionResult">결과가 여기에 표시됩니다.</div>
+                  <label>Result</label>
+                  <div id="conversionResult">Result will be shown here.</div>
                 </div>
               </div>
               <div class="unit-selectors">
                 <div class="unit-group">
-                  <label>변환 전 단위</label>
+                  <label>From Unit</label>
                   <select id="fromUnit">
-                    <option value="px">픽셀 (px)</option>
-                    <option value="pt">포인트 (pt)</option>
-                    <option value="pc">파이카 (pc)</option>
+                    <option value="px">Pixels (px)</option>
+                    <option value="pt">Points (pt)</option>
+                    <option value="pc">Picas (pc)</option>
                     <option value="em">Em (em)</option>
                     <option value="rem">Rem (rem)</option>
-                    <option value="vw">뷰포트 너비 (vw)</option>
-                    <option value="vh">뷰포트 높이 (vh)</option>
-                    <option value="in">인치 (in)</option>
-                    <option value="cm">센티미터 (cm)</option>
-                    <option value="mm">밀리미터 (mm)</option>
-                    <option value="q">쿼터 밀리미터 (q)</option>
+                    <option value="vw">Viewport Width (vw)</option>
+                    <option value="vh">Viewport Height (vh)</option>
+                    <option value="in">Inches (in)</option>
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="mm">Millimeters (mm)</option>
+                    <option value="q">Quarter-millimeters (q)</option>
                   </select>
                 </div>
                 <div class="unit-group">
-                  <label>변환 후 단위</label>
+                  <label>To Unit</label>
                   <select id="toUnit">
-                    <option value="px">픽셀 (px)</option>
-                    <option value="pt">포인트 (pt)</option>
-                    <option value="pc">파이카 (pc)</option>
+                    <option value="px">Pixels (px)</option>
+                    <option value="pt">Points (pt)</option>
+                    <option value="pc">Picas (pc)</option>
                     <option value="em">Em (em)</option>
                     <option value="rem">Rem (rem)</option>
-                    <option value="vw">뷰포트 너비 (vw)</option>
-                    <option value="vh">뷰포트 높이 (vh)</option>
-                    <option value="in">인치 (in)</option>
-                    <option value="cm">센티미터 (cm)</option>
-                    <option value="mm">밀리미터 (mm)</option>
-                    <option value="q">쿼터 밀리미터 (q)</option>
+                    <option value="vw">Viewport Width (vw)</option>
+                    <option value="vh">Viewport Height (vh)</option>
+                    <option value="in">Inches (in)</option>
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="mm">Millimeters (mm)</option>
+                    <option value="q">Quarter-millimeters (q)</option>
                   </select>
                 </div>
               </div>
               <div class="tool-controls">
                 <button class="tool-button" onclick="convertUnits()">
-                  변환하기
+                  Convert
                 </button>
                 <button class="tool-button" onclick="copyConversionResult()">
-                  결과 복사
+                  Copy Result
                 </button>
               </div>
             </div>
