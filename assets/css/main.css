@@ -163,7 +163,7 @@ body {
 .sitemap-section {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  padding: 25px;
+  padding: 20px;
   border: 1px solid rgba(0, 255, 136, 0.2);
   transition: all 0.3s ease;
 }
@@ -180,6 +180,12 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.sitemap-description {
+  padding: 0px;
+  line-height: 1.6;
+  color: #aaa;
 }
 
 .sitemap-list {
