@@ -418,6 +418,18 @@ class ComponentLoader {
         e.preventDefault();
       });
     });
+
+    // 언어 버튼 이벤트 추가
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = btn.dataset.lang;
+        console.log("Language button clicked:", lang);
+        if (lang && typeof window.setLanguage === "function") {
+          window.setLanguage(lang);
+        }
+      });
+    });
   }
 
   static initFooterEvents() {
@@ -435,6 +447,18 @@ class ComponentLoader {
           } else {
             window.location.href = `/en/about/${page}.html`;
           }
+        }
+      });
+    });
+
+    // 언어 버튼 이벤트 추가
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = btn.dataset.lang;
+        console.log("Language button clicked:", lang);
+        if (lang && typeof window.setLanguage === "function") {
+          window.setLanguage(lang);
         }
       });
     });
