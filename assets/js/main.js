@@ -343,31 +343,6 @@ function setupEventDelegation() {
       event.preventDefault();
       showPage("home");
     }
-
-    // 언어 버튼 클릭 처리
-    if (target.classList.contains("lang-btn")) {
-      event.preventDefault();
-      const lang = target.dataset.lang;
-      console.log("Language button clicked:", lang);
-
-      if (lang) {
-        // 현재 경로를 가져옴
-        const currentPath = window.location.pathname;
-
-        // 새로운 경로 생성
-        let newPath;
-        if (lang === "en") {
-          newPath = currentPath.replace(/^\/ko\//, "/en/");
-        } else {
-          newPath = currentPath.replace(/^\/en\//, "/ko/");
-        }
-
-        // 경로가 변경되었다면 페이지 이동
-        if (newPath !== currentPath) {
-          window.location.href = newPath;
-        }
-      }
-    }
   });
 }
 
