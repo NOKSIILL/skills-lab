@@ -183,9 +183,19 @@ body {
 }
 
 .sitemap-description {
-  padding: 0px;
+  padding: 5px;
   line-height: 1.6;
   color: #aaa;
+}
+
+.sitemap-description strong {
+  color: #00ff88;
+  font-size: 14px;
+}
+
+.sitemap-description p {
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .sitemap-list {
