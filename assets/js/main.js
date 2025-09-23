@@ -343,6 +343,15 @@ function setupEventDelegation() {
       event.preventDefault();
       showPage("home");
     }
+
+    // 언어 버튼 클릭 처리
+    if (target.classList.contains("lang-btn")) {
+      event.preventDefault();
+      const lang = target.dataset.lang;
+      if (lang && typeof window.setLanguage === "function") {
+        window.setLanguage(lang);
+      }
+    }
   });
 }
 

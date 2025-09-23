@@ -99,19 +99,7 @@ let currentLanguage = localStorage.getItem("userLanguage") || "ko";
 function getCurrentLanguage() {
   return currentLanguage;
 }
-/*
-// 번역 텍스트 가져오기
-function getTranslation(key, fallback = key) {
-  if (
-    window.translations &&
-    window.translations[currentLanguage] &&
-    window.translations[currentLanguage][key]
-  ) {
-    return window.translations[currentLanguage][key];
-  }
-  return fallback;
-}
-*/
+
 // 언어별 알림 메시지 표시
 function showLocalizedNotification(messageKey, fallbackMessage = null) {
   const message = getTranslation(messageKey, fallbackMessage || messageKey);
@@ -134,8 +122,7 @@ function detectBrowserLanguage() {
   }
   return "ko"; // 기본값
 }
-/*
-// 언어 버튼 상태 업데이트
+
 function updateLanguageButtonStates(lang) {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.classList.remove("active");
@@ -144,7 +131,7 @@ function updateLanguageButtonStates(lang) {
     }
   });
 }
-*/
+
 // 언어 변경 콜백 함수들 관리
 const languageChangeCallbacks = [];
 
