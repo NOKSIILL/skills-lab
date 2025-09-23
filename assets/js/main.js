@@ -342,9 +342,13 @@ function setupEventDelegation() {
     }
 
     // 언어 버튼 클릭 처리
-    if (target.classList.contains("lang-btn")) {
+    if (target.classList.contains("lang-btn") || target.closest(".lang-btn")) {
       event.preventDefault();
-      const lang = target.dataset.lang;
+      const button = target.classList.contains("lang-btn")
+        ? target
+        : target.closest(".lang-btn");
+      const lang = button.dataset.lang;
+      console.log("Language button clicked:", lang);
       if (lang && typeof window.setLanguage === "function") {
         window.setLanguage(lang);
       }
@@ -469,31 +473,6 @@ function showCopyNotification(message = null, duration = 2000) {
     notification.remove();
   }, duration);
 }
-
-/*
-// 다국어 지원 함수들
-
-
-  //currentLanguage = lang;
-  //localStorage.setItem("userLanguage", lang);
-
-  // 모든 언어 버튼에서 active 클래스 제거
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.classList.remove("active");
-  });
-
-  // 선택된 언어 버튼에 active 클래스 추가
-  document.querySelectorAll(`.lang-btn[data-lang="${lang}"]`).forEach((btn) => {
-    btn.classList.add("active");
-  });
-
-  // HTML lang 속성 설정
-  document.documentElement.lang = lang;
-
-  console.log(`Language changed to: ${lang}`);
-}
-
-*/
 
 // 전역 함수로 노출
 window.showPage = showPage;
