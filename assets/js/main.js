@@ -476,6 +476,7 @@ function showCopyNotification(message = null, duration = 2000) {
   }, duration);
 }
 
+/*
 // 다국어 지원 함수들
 function setLanguage(lang) {
   console.log("setLanguage called with:", lang);
@@ -504,7 +505,6 @@ function setLanguage(lang) {
   console.log(`Language changed to: ${lang}`);
 }
 
-/*
 
 
 function loadSavedLanguage() {

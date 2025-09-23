@@ -182,14 +182,14 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
 
   // 버튼 상태 업데이트
-  //updateLanguageButtonStates(lang);
+  updateLanguageButtonStates(lang);
 
   // 콜백 함수들 실행
   triggerLanguageChangeCallbacks(lang);
 
   console.log("Language successfully changed to:", lang);
 }
-/*
+
 // 언어 시스템 초기화
 function initializeLanguage() {
   console.log("Initializing language system...");
@@ -205,11 +205,8 @@ function initializeLanguage() {
   currentLanguage = initialLang;
   window.currentLanguage = initialLang;
 
-
   console.log("Language system initialized with:", initialLang);
 }
-
-
 
 // DOM 로드 시 다국어 시스템 초기화
 if (document.readyState === "loading") {
@@ -222,16 +219,15 @@ if (document.readyState === "loading") {
 
 // 언어 변경 시 페이지별 특별 처리 콜백 등록
 addLanguageChangeCallback(applyPageSpecificTranslations);
-*/
 
 // 전역 함수로 노출
 window.getCurrentLanguage = getCurrentLanguage;
 window.getTranslation = getTranslation;
 window.showLocalizedNotification = showLocalizedNotification;
 window.showLocalizedCopyNotification = showLocalizedCopyNotification;
-/*
+
 window.setLanguage = setLanguage;
 window.initializeLanguage = initializeLanguage;
-*/
+
 window.addLanguageChangeCallback = addLanguageChangeCallback;
 window.currentLanguage = currentLanguage;
