@@ -168,26 +168,34 @@ function triggerLanguageChangeCallbacks(newLanguage) {
 function setLanguage(lang) {
   console.log("Setting language to:", lang);
 
-  if (!window.translations || !window.translations[lang]) {
-    console.warn(`Language ${lang} not supported`);
-    return;
-  }
-
   // 현재 언어 업데이트
   currentLanguage = lang;
-  window.currentLanguage = lang;
   localStorage.setItem("userLanguage", lang);
 
   // HTML lang 속성 설정
   document.documentElement.lang = lang;
 
   // 버튼 상태 업데이트
-  updateLanguageButtonStates(lang);
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.remove("active");
+    if (btn.dataset.lang === lang) {
+      btn.classList.add("active");
+    }
+  });
 
-  // 콜백 함수들 실행
-  triggerLanguageChangeCallbacks(lang);
+  // 현재 경로를 기반으로 새로운 경로 생성 및 이동
+  const currentPath = window.location.pathname;
+  let newPath;
 
-  console.log("Language successfully changed to:", lang);
+  if (lang === "en") {
+    newPath = currentPath.replace(/^\/ko\//, "/en/");
+  } else {
+    newPath = currentPath.replace(/^\/en\//, "/ko/");
+  }
+
+  if (newPath !== currentPath) {
+    window.location.href = newPath;
+  }
 }
 
 // 언어 시스템 초기화
