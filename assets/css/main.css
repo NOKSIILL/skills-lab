@@ -80,10 +80,11 @@ body {
   gap: 10px;
   align-items: center;
 }
-
+/*
 .header-container .language-selector {
   display: none !important;
 }
+  */
 
 /* 메인 컨테이너 */
 .main-container {

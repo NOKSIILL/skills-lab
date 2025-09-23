@@ -124,7 +124,6 @@ function showLocalizedCopyNotification() {
   showCopyNotification(message);
 }
 
-/*
 // 브라우저 언어 감지
 function detectBrowserLanguage() {
   const browserLang = navigator.language || navigator.userLanguage;
@@ -136,67 +135,6 @@ function detectBrowserLanguage() {
   return "ko"; // 기본값
 }
 
-// 메타 태그 업데이트
-function updateMetaTags(texts) {
-  if (texts.pageTitle) {
-    document.title = texts.pageTitle;
-  }
-
-  const descMeta = document.querySelector('meta[name="description"]');
-  if (descMeta && texts.pageDescription) {
-    descMeta.content = texts.pageDescription;
-  }
-
-  const keywordsMeta = document.querySelector('meta[name="keywords"]');
-  if (keywordsMeta && texts.pageKeywords) {
-    keywordsMeta.content = texts.pageKeywords;
-  }
-
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle && texts.pageTitle) {
-    ogTitle.content = texts.pageTitle;
-  }
-
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc && texts.pageDescription) {
-    ogDesc.content = texts.pageDescription;
-  }
-}
-
-// 플레이스홀더 업데이트
-function updatePlaceholders(texts) {
-  // 텍스트 입력 필드
-  const textInput = document.getElementById("textInput");
-  if (textInput && texts.textPlaceholder) {
-    textInput.placeholder = texts.textPlaceholder;
-  }
-
-  // 숫자 입력 필드
-  const inputValue = document.getElementById("inputValue");
-  if (inputValue && texts.inputValueLabel) {
-    inputValue.placeholder = texts.inputValueLabel;
-  }
-
-  // 결과 영역 기본 텍스트 업데이트
-  const textResult = document.getElementById("textResult");
-  if (
-    textResult &&
-    textResult.textContent.includes("변환된 텍스트가") &&
-    texts.textResultPlaceholder
-  ) {
-    textResult.textContent = texts.textResultPlaceholder;
-  }
-
-  const conversionResult = document.getElementById("conversionResult");
-  if (
-    conversionResult &&
-    conversionResult.textContent.includes("결과가") &&
-    texts.resultPlaceholder
-  ) {
-    conversionResult.textContent = texts.resultPlaceholder;
-  }
-}
-*/
 // 언어 버튼 상태 업데이트
 function updateLanguageButtonStates(lang) {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -226,7 +164,6 @@ function triggerLanguageChangeCallbacks(newLanguage) {
   });
 }
 
-/*
 // 메인 언어 변경 함수
 function setLanguage(lang) {
   console.log("Setting language to:", lang);
@@ -247,15 +184,12 @@ function setLanguage(lang) {
   // 버튼 상태 업데이트
   updateLanguageButtonStates(lang);
 
-  // 번역 적용
-  updateAllTranslations(lang);
-
   // 콜백 함수들 실행
   triggerLanguageChangeCallbacks(lang);
 
   console.log("Language successfully changed to:", lang);
 }
-
+/*
 // 언어 시스템 초기화
 function initializeLanguage() {
   console.log("Initializing language system...");
@@ -271,101 +205,11 @@ function initializeLanguage() {
   currentLanguage = initialLang;
   window.currentLanguage = initialLang;
 
-  // 즉시 번역 적용
-  setTimeout(() => {
-    updateLanguageButtonStates(initialLang);
-    updateAllTranslations(initialLang);
-  }, 100);
 
   console.log("Language system initialized with:", initialLang);
 }
 
-// 특정 요소에 번역 적용
-function applyTranslationToElement(element, translationKey) {
-  const translation = getTranslation(translationKey);
-  if (translation !== translationKey) {
-    if (
-      translationKey.includes("Subtitle") ||
-      translationKey.includes("Instructions")
-    ) {
-      element.innerHTML = translation;
-    } else {
-      element.textContent = translation;
-    }
-  }
-}
 
-// 동적으로 생성된 요소에 번역 적용
-function applyTranslationToNewElement(element, key) {
-  const translation = getTranslation(key);
-  if (translation && translation !== key) {
-    
-    applyTranslationToElement(element, key);
-  }
-}
-
-// 페이지별 특별 번역 처리
-function applyPageSpecificTranslations() {
-  const currentPath = window.location.pathname;
-
-  // 게임 설명 텍스트 업데이트
-  if (currentPath.includes("/games/")) {
-    updateGameDescriptions();
-  }
-
-  // 도구 설명 텍스트 업데이트
-  if (currentPath.includes("/tools/")) {
-    updateToolDescriptions();
-  }
-
-  // 인덱스 페이지 설명 업데이트
-  if (
-    currentPath.includes("/games/index.html") ||
-    currentPath.includes("/tools/index.html")
-  ) {
-    updateIndexDescriptions();
-  }
-}
-
-// 게임 설명 업데이트
-function updateGameDescriptions() {
-  const descriptions = {
-    "fps-aim": "fpsAimDesc",
-    "reaction-test": "reactionTestDesc",
-    "memory-game": "memoryGameDesc",
-    "color-match": "colorMatchDesc",
-  };
-
-  Object.entries(descriptions).forEach(([game, key]) => {
-    if (window.location.pathname.includes(game)) {
-      // 특정 게임 페이지의 설명 요소가 있다면 업데이트
-      const descElement = document.querySelector(".game-description");
-      if (descElement) {
-        descElement.textContent = getTranslation(key);
-      }
-    }
-  });
-}
-
-// 도구 설명 업데이트
-function updateToolDescriptions() {
-  const descriptions = {
-    "color-palette": "colorPaletteDesc",
-    keywords: "keywordsDesc",
-    "unit-converter": "unitConverterDesc",
-    "text-transformer": "textTransformerDesc",
-  };
-
-  Object.entries(descriptions).forEach(([tool, key]) => {
-    if (window.location.pathname.includes(tool)) {
-      // 특정 도구 페이지의 설명 요소가 있다면 업데이트
-      const descElement = document.querySelector(".tool-description");
-      if (descElement) {
-        descElement.textContent = getTranslation(key);
-      }
-    }
-  });
-}
 
 // DOM 로드 시 다국어 시스템 초기화
 if (document.readyState === "loading") {
@@ -390,8 +234,4 @@ window.setLanguage = setLanguage;
 window.initializeLanguage = initializeLanguage;
 */
 window.addLanguageChangeCallback = addLanguageChangeCallback;
-/*
-window.updateAllTranslations = updateAllTranslations;
-window.applyTranslationToNewElement = applyTranslationToNewElement;
-*/
 window.currentLanguage = currentLanguage;

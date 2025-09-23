@@ -343,19 +343,20 @@ function setupEventDelegation() {
       event.preventDefault();
       showPage("home");
     }
-
+    /*
     // 언어 버튼 클릭 처리
     if (target.classList.contains("lang-btn")) {
       event.preventDefault();
       event.stopPropagation();
       const lang = target.dataset.lang;
       console.log("Language button clicked:", lang, target);
-      /*
+      
       if (lang) {
         setLanguage(lang);
       }
-        */
+      
     }
+      */
   });
 }
 
@@ -487,8 +488,8 @@ function setLanguage(lang) {
     return;
   }
 
-  currentLanguage = lang;
-  localStorage.setItem("userLanguage", lang);
+  //currentLanguage = lang;
+  //localStorage.setItem("userLanguage", lang);
 
   // 모든 언어 버튼에서 active 클래스 제거
   document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -504,10 +505,11 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
 
   // 번역 적용
-  applyTranslations(lang);
+  //applyTranslations(lang);
 
   console.log(`Language changed to: ${lang}`);
 }
+
 
 function applyTranslations(lang) {
   const texts = translations[lang];
@@ -640,6 +642,7 @@ window.selectTool = selectTool;
 window.showCopyNotification = showCopyNotification;
 /*
 window.setLanguage = setLanguage;
+
 window.initializeLanguage = initializeLanguage;
 window.currentLanguage = currentLanguage;
 */
