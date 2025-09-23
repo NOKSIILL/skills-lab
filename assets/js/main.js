@@ -1,6 +1,3 @@
-// 전역 변수
-let currentLanguage = "ko";
-
 // 레이아웃 강제 재설정 함수 (이벤트 보존)
 function forceLayoutReset() {
   const containers = document.querySelectorAll(
@@ -409,10 +406,10 @@ document.addEventListener("DOMContentLoaded", function () {
       forceLayoutReset();
     }, 100);
   });
-  /*
+
   // 언어 초기화
   initializeLanguage();
-*/
+
   console.log("Initialization complete");
 });
 
@@ -475,13 +472,7 @@ function showCopyNotification(message = null, duration = 2000) {
 
 /*
 // 다국어 지원 함수들
-function setLanguage(lang) {
-  console.log("setLanguage called with:", lang);
 
-  if (!translations[lang]) {
-    console.warn(`Language ${lang} not supported`);
-    return;
-  }
 
   //currentLanguage = lang;
   //localStorage.setItem("userLanguage", lang);
@@ -502,42 +493,8 @@ function setLanguage(lang) {
   console.log(`Language changed to: ${lang}`);
 }
 
-
-
-function loadSavedLanguage() {
-  const savedLang = localStorage.getItem("userLanguage");
-  if (savedLang && translations[savedLang]) {
-    setLanguage(savedLang);
-    return true;
-  }
-  return false;
-}
-
-function detectBrowserLanguage() {
-  const browserLang = navigator.language || navigator.userLanguage;
-
-  if (browserLang.startsWith("ko")) {
-    return "ko";
-  } else if (browserLang.startsWith("en")) {
-    return "en";
-  } else {
-    return "ko"; // 기본값
-  }
-}
-
-function initializeLanguage() {
-  console.log("Initializing language...");
-
-  // 저장된 언어가 있으면 사용
-  if (loadSavedLanguage()) {
-    return;
-  }
-
-  // 브라우저 언어 감지
-  const detectedLang = detectBrowserLanguage();
-  setLanguage(detectedLang);
-}
 */
+
 // 전역 함수로 노출
 window.showPage = showPage;
 window.selectGame = selectGame;
