@@ -342,23 +342,18 @@ function setupEventDelegation() {
     }
 
     // 다국어 버튼 이벤트 핸들러 추가
-    document.body.addEventListener("click", function (event) {
-      const target = event.target;
-      if (
-        target.classList.contains("lang-btn") ||
-        target.closest(".lang-btn")
-      ) {
-        event.preventDefault();
-        const button = target.classList.contains("lang-btn")
-          ? target
-          : target.closest(".lang-btn");
-        const lang = button.dataset.lang;
-        console.log("Language button clicked:", lang);
-        if (lang && typeof window.setLanguage === "function") {
-          window.setLanguage(lang);
-        }
+    // 언어 버튼 클릭 처리 - 여기로 이동 및 중첩 제거
+    if (target.classList.contains("lang-btn") || target.closest(".lang-btn")) {
+      event.preventDefault();
+      const button = target.classList.contains("lang-btn")
+        ? target
+        : target.closest(".lang-btn");
+      const lang = button.dataset.lang;
+      console.log("Language button clicked:", lang);
+      if (lang && typeof window.setLanguage === "function") {
+        window.setLanguage(lang);
       }
-    });
+    }
   });
 }
 
