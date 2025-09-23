@@ -134,7 +134,7 @@ function detectBrowserLanguage() {
   }
   return "ko"; // 기본값
 }
-
+/*
 // 언어 버튼 상태 업데이트
 function updateLanguageButtonStates(lang) {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -144,7 +144,7 @@ function updateLanguageButtonStates(lang) {
     }
   });
 }
-
+*/
 // 언어 변경 콜백 함수들 관리
 const languageChangeCallbacks = [];
 
@@ -182,7 +182,7 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
 
   // 버튼 상태 업데이트
-  updateLanguageButtonStates(lang);
+  //updateLanguageButtonStates(lang);
 
   // 콜백 함수들 실행
   triggerLanguageChangeCallbacks(lang);
