@@ -346,6 +346,7 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 5px 10px;
+  border: none;
 }
 
 .footer-item:hover {

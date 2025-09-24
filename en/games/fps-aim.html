@@ -6,11 +6,11 @@
     <title>FPS Aim Trainer - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="FPS 게임 실력 향상을 위한 에임 훈련 게임. 반응속도와 정확도를 개선하세요."
+      content="Aim training game for improving FPS game skills. Enhance your reaction time and accuracy."
     />
     <meta
       name="keywords"
-      content="FPS 게임, 에임 훈련, 반응속도, 정확도, 온라인 게임"
+      content="FPS game, aim training, reaction time, accuracy, online game, skills improvement"
     />
 
     <!-- Open Graph -->
@@ -20,7 +20,7 @@
     />
     <meta
       property="og:description"
-      content="FPS 게임 실력 향상을 위한 에임 훈련 게임"
+      content="Aim training game for improving FPS game skills. Enhance your reaction time and accuracy."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://domain.com/games/fps-aim.html" />
@@ -52,19 +52,19 @@
             <div class="game-title">🎯 FPS Aim Trainer</div>
             <div class="game-stats">
               <div class="stat-item">
-                <div class="stat-label">점수</div>
+                <div class="stat-label">Score</div>
                 <div class="stat-value" id="score">0</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">정확도</div>
+                <div class="stat-label">Accuracy</div>
                 <div class="stat-value" id="accuracy">100%</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">평균 반응속도</div>
+                <div class="stat-label">Avg Response</div>
                 <div class="stat-value" id="avgReaction">0ms</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">시간</div>
+                <div class="stat-label">Time</div>
                 <div class="stat-value" id="timer">30</div>
               </div>
             </div>
@@ -75,38 +75,38 @@
             <div class="start-screen" id="startScreen">
               <div class="start-title">🎯 FPS Aim Trainer</div>
               <div class="start-subtitle">
-                빨간 타겟이 나타나면 빠르게 클릭하세요!<br />
-                30초 동안 최대한 많은 타겟을 맞춰 반응속도와 정확도를
-                향상시키세요.
+                Click the red targets as fast as you can!<br />
+                Hit as many targets as possible in 30 seconds to improve your
+                reaction time and accuracy.
               </div>
               <button class="start-button" onclick="startGame()">
-                게임 시작
+                Start Game
               </button>
             </div>
 
             <!-- 게임 오버 화면 -->
             <div class="game-over" id="gameOver">
-              <div class="game-over-title">🏆 게임 완료!</div>
+              <div class="game-over-title">🏆 Game Complete!</div>
               <div class="final-stats">
                 <div class="final-stat">
                   <div class="final-stat-value" id="finalScore">0</div>
-                  <div class="final-stat-label">최종 점수</div>
+                  <div class="final-stat-label">Final Score</div>
                 </div>
                 <div class="final-stat">
                   <div class="final-stat-value" id="finalAccuracy">0%</div>
-                  <div class="final-stat-label">정확도</div>
+                  <div class="final-stat-label">Accuracy</div>
                 </div>
                 <div class="final-stat">
                   <div class="final-stat-value" id="finalReaction">0ms</div>
-                  <div class="final-stat-label">평균 반응속도</div>
+                  <div class="final-stat-label">Avg Response</div>
                 </div>
                 <div class="final-stat">
                   <div class="final-stat-value" id="finalHits">0</div>
-                  <div class="final-stat-label">명중 횟수</div>
+                  <div class="final-stat-label">Total Hits</div>
                 </div>
               </div>
               <button class="restart-button" onclick="restartGame()">
-                다시 시작
+                Play Again
               </button>
             </div>
           </div>

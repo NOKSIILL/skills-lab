@@ -285,13 +285,13 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 12px;
-  border-radius: 8px;
+
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: none;
 }
 
 .footer-item:hover {
