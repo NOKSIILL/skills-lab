@@ -333,6 +333,11 @@ body {
   border: 1px solid rgba(172, 172, 172, 0.8);
 }
 
+table th,
+table td {
+  border: 1px solid rgba(172, 172, 172, 0.8);
+}
+
 .about-info strong {
   color: #00ff88;
 }
