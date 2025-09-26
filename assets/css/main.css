@@ -304,17 +304,17 @@ body {
   text-align: center;
 }
 
-.policy .about-title {
+.about-policy .about-title {
   font-size: 25px;
   color: #ccc;
 }
 
-.policy strong {
+.about-policy strong {
   color: #ccc;
   font-size: 16px;
 }
 
-.policy p {
+.about-policy p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 20px;
@@ -326,11 +326,7 @@ body {
   font-size: 16px;
 }
 
-.about-card strong {
-  color: #00ff88;
-}
-
-.policy table {
+.about-policy table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
@@ -338,8 +334,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.policy table tr {
+.about-policy table tr {
   background-color: #f5f5f5;
+}
+
+.about-info strong {
+  color: #00ff88;
 }
 
 /* 푸터 */
