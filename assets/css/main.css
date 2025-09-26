@@ -304,6 +304,22 @@ body {
   text-align: center;
 }
 
+.policy .about-title {
+  font-size: 25px;
+  color: #ccc;
+}
+
+.policy strong {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.policy p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
 .about-card p {
   line-height: 1.8;
   margin: 20px 0;
@@ -312,6 +328,18 @@ body {
 
 .about-card strong {
   color: #00ff88;
+}
+
+.policy table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy table tr {
+  background-color: #f5f5f5;
 }
 
 /* 푸터 */
