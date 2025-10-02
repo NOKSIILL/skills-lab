@@ -549,7 +549,7 @@ body {
 
   /* 헤더 아래 마진 */
   .main-container {
-    margin-top: 120px;
+    margin-top: 160px;
     padding: 0 20px;
   }
 
@@ -731,7 +731,7 @@ body {
   }
 
   .main-container {
-    margin-top: 160px;
+    margin-top: 170px;
     padding: 0 15px;
   }
 
@@ -976,7 +976,7 @@ body {
 /* ===== 소형 모바일 (479px 이하) ===== */
 @media (max-width: 479px) {
   .main-container {
-    margin-top: 170px;
+    margin-top: 180px;
     padding: 0 10px;
   }
 
