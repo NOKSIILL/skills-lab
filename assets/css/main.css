@@ -86,12 +86,6 @@ body {
 }
   */
 
-/* 메인 컨테이너 */
-.main-container {
-  margin-top: 70px;
-  min-height: calc(100vh - 70px);
-}
-
 /* 페이지 분리 */
 .page {
   display: none;
@@ -570,9 +564,11 @@ html {
 
 /* ===== 향상된 레이아웃 유연성 ===== */
 .main-container {
-  min-height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
+
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
 }
 
 .games-container,
