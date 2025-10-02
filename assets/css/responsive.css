@@ -600,7 +600,7 @@ body {
   /* 배너 조정 */
   .hero-banner {
     height: 280px;
-    margin: 0 -20px;
+    margin: 20px 0 -20px -20px;
   }
 
   .banner-title {
@@ -793,7 +793,7 @@ body {
   /* 배너 */
   .hero-banner {
     height: 220px;
-    margin: 0 -15px;
+    margin: 25px 0 -15px -15px;
     position: relative;
     z-index: 1;
   }
@@ -976,6 +976,7 @@ body {
 /* ===== 소형 모바일 (479px 이하) ===== */
 @media (max-width: 479px) {
   .main-container {
+    margin-top: 200px;
     padding: 0 10px;
   }
 
@@ -998,7 +999,7 @@ body {
 
   .hero-banner {
     height: 180px;
-    margin: 0 -10px;
+    margin: 30px 0 -10px -10px;
   }
 
   .banner-title {
