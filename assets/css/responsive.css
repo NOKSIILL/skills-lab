@@ -600,7 +600,7 @@ body {
   /* 배너 조정 */
   .hero-banner {
     height: 280px;
-    margin: 20px -20px 0 -20px;
+    margin: 10px -20px 0 -20px;
   }
 
   .banner-title {
@@ -793,7 +793,7 @@ body {
   /* 배너 */
   .hero-banner {
     height: 220px;
-    margin: 25px -15px 0 -15px;
+    margin: 20px -15px 0 -15px;
     position: relative;
     z-index: 1;
   }
@@ -999,7 +999,7 @@ body {
 
   .hero-banner {
     height: 180px;
-    margin: 30px -10px 0 -10px;
+    margin: 20px -10px 0 -10px;
   }
 
   .banner-title {
