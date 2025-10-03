@@ -367,6 +367,53 @@ table td {
   color: #00ff88;
 }
 
+.about-box {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 10px;
+}
+
+.about-box h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.about-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-box ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 5px;
+}
+
+.about-box div {
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 5px;
+}
+
+.about-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about-btn a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #1a1a2e;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 10px;
+}
+
 /* 푸터 */
 .footer-info {
   background: rgba(0, 0, 0, 0.9);
