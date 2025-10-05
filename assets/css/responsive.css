@@ -241,10 +241,6 @@ body {
   height: 100px;
 }
 
-.about-container .ad-sidebar {
-  display: none !important;
-}
-
 .ads-hide {
   display: none !important;
 }
