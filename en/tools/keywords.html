@@ -1,48 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>키워드 생성기 - Onggeulda Skills Lab</title>
-    <meta name="description" content="창작 영감을 위한 랜덤 키워드 생성 도구" />
+    <title>Today's Keywords - Onggeulda Skills Lab</title>
+    <meta name="description" content="Random keyword generator for creative inspiration" />
     <meta
       name="keywords"
-      content="키워드 생성기, 창작 영감, 랜덤 키워드, 아이디어, 브레인스토밍"
+      content="keyword generator, creative inspiration, random keywords, ideas, brainstorming, creativity tool"
     />
 
-    <meta property="og:title" content="키워드 생성기 - Onggeulda Skills Lab" />
+    <meta property="og:title" content="Today's Keywords - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="창작 영감을 위한 랜덤 키워드 생성 도구"
+      content="Random keyword generator for creative inspiration"
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://domain.com/ko/tools/keywords.html"
-    />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://domain.com/tools/keywords.html" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/tools.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
-
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://domain.com/ko/[페이지-경로]"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://domain.com/en/[페이지-경로]"
-    />
-    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -53,7 +31,7 @@
 
         <main class="tool-content">
           <div class="tool-header">
-            <div class="tool-title">💡 오늘의 키워드</div>
+            <div class="tool-title">💡 Today's Keywords</div>
             <div class="tool-stats">
               <!-- 도구 페이지는 통계가 없으므로 비워둠 -->
             </div>
@@ -61,19 +39,19 @@
 
           <div class="tool-area">
             <div class="tool-instructions">
-              <h2>창작 영감을 위한 키워드</h2>
+              <h2>Keywords for Creative Inspiration</h2>
               <p>
-                랜덤하게 생성되는 키워드로 새로운 아이디어를 얻어보세요. 글쓰기,
-                그림, 음악 등 모든 창작 활동에 활용할 수 있습니다.
+                Get new ideas from randomly generated keywords. Use them for writing, 
+          drawing, music, or any creative activity.
               </p>
             </div>
             <div class="keyword-grid" id="keywordGrid"></div>
             <div class="tool-controls">
               <button class="tool-button" onclick="generateKeywords()">
-                새 키워드 생성
+                Generate New Keywords
               </button>
               <button class="tool-button" onclick="copyKeywords()">
-                키워드 복사
+                Copy Keywords
               </button>
             </div>
           </div>
@@ -82,10 +60,14 @@
         <!-- 광고 영역 (데스크탑) -->
         <aside class="ad-sidebar desktop-only">
           <div class="ad-slot">
-            <div class="ad-placeholder">ad</div>
+            <div class="ad-placeholder">
+              ad
+            </div>
           </div>
           <div class="ad-slot">
-            <div class="ad-placeholder">ad</div>
+            <div class="ad-placeholder">
+              ad
+            </div>
           </div>
         </aside>
       </div>
@@ -95,18 +77,21 @@
     <div class="mobile-ads">
       <div class="ad-container">
         <div class="ad-slot">
-          <div class="ad-placeholder">ad</div>
+          <div class="ad-placeholder">
+            ad
+          </div>
         </div>
         <div class="ad-slot">
-          <div class="ad-placeholder">ad</div>
+          <div class="ad-placeholder">
+            ad
+          </div>
         </div>
       </div>
     </div>
 
     <footer class="footer-info"></footer>
 
-    <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
-
+    <div id="copyNotification" class="copy-notification">Copied to clipboard!
     <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>
     <script src="/assets/js/tools/keywords.js"></script>

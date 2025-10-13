@@ -1,6 +1,3 @@
-// 전역 변수
-let currentLanguage = "ko";
-
 // 레이아웃 강제 재설정 함수 (이벤트 보존)
 function forceLayoutReset() {
   const containers = document.querySelectorAll(
@@ -344,17 +341,18 @@ function setupEventDelegation() {
       showPage("home");
     }
 
-    // 언어 버튼 클릭 처리
-    if (target.classList.contains("lang-btn")) {
+    // 다국어 버튼 이벤트 핸들러 추가
+    // 언어 버튼 클릭 처리 - 여기로 이동 및 중첩 제거
+    if (target.classList.contains("lang-btn") || target.closest(".lang-btn")) {
       event.preventDefault();
-      event.stopPropagation();
-      const lang = target.dataset.lang;
-      console.log("Language button clicked:", lang, target);
-      /*
-      if (lang) {
-        setLanguage(lang);
+      const button = target.classList.contains("lang-btn")
+        ? target
+        : target.closest(".lang-btn");
+      const lang = button.dataset.lang;
+      console.log("Language button clicked:", lang);
+      if (lang && typeof window.setLanguage === "function") {
+        window.setLanguage(lang);
       }
-        */
     }
   });
 }
@@ -413,10 +411,10 @@ document.addEventListener("DOMContentLoaded", function () {
       forceLayoutReset();
     }, 100);
   });
-  /*
+
   // 언어 초기화
   initializeLanguage();
-*/
+
   console.log("Initialization complete");
 });
 
@@ -443,12 +441,16 @@ const DeviceUtils = {
 
 // 향상된 알림 시스템
 function showCopyNotification(message = null, duration = 2000) {
-  /*
   if (!message) {
     message =
-      translations[currentLanguage]?.copyNotification || "복사되었습니다!";
+      translations[currentLanguage]?.copyNotification ||
+      "복사되었습니다!</br>Copied to clipboard!";
   }
-*/
+  const notifi = document.getElementById("notification");
+  if (notifi) {
+    notifi.innerHTML = message; // <br>이 줄바꿈으로 동작
+  }
+
   const existingNotification = document.querySelector(".copy-notification");
   if (existingNotification) {
     existingNotification.remove();
@@ -456,7 +458,7 @@ function showCopyNotification(message = null, duration = 2000) {
 
   const notification = document.createElement("div");
   notification.className = "copy-notification";
-  notification.textContent = message;
+  notification.innerHTML = message;
 
   if (DeviceUtils.isMobile()) {
     notification.style.top = "auto";
@@ -473,169 +475,8 @@ function showCopyNotification(message = null, duration = 2000) {
   }, duration);
 }
 
-/*
-// 다국어 지원 함수들
-function setLanguage(lang) {
-  console.log("setLanguage called with:", lang);
-
-  if (!translations[lang]) {
-    console.warn(`Language ${lang} not supported`);
-    return;
-  }
-
-  currentLanguage = lang;
-  localStorage.setItem("userLanguage", lang);
-
-  // 모든 언어 버튼에서 active 클래스 제거
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.classList.remove("active");
-  });
-
-  // 선택된 언어 버튼에 active 클래스 추가
-  document.querySelectorAll(`.lang-btn[data-lang="${lang}"]`).forEach((btn) => {
-    btn.classList.add("active");
-  });
-
-  // HTML lang 속성 설정
-  document.documentElement.lang = lang;
-
-  // 번역 적용
-  applyTranslations(lang);
-
-  console.log(`Language changed to: ${lang}`);
-}
-
-function applyTranslations(lang) {
-  const texts = translations[lang];
-  if (!texts) return;
-
-  // 기본 요소들에 번역 적용
-  Object.keys(texts).forEach((key) => {
-    elements.forEach((element) => {
-      if (key.includes("Subtitle") || key.includes("Instructions")) {
-        element.innerHTML = texts[key];
-      } else {
-        element.textContent = texts[key];
-      }
-    });
-
-    // ID 기반 번역도 유지 (기존 호환성)
-    const element = document.getElementById(key);
-    if (element) {
-      if (key.includes("Subtitle") || key.includes("Instructions")) {
-        element.innerHTML = texts[key];
-      } else {
-        element.textContent = texts[key];
-      }
-    }
-  });
-
-  // 메타 태그 업데이트
-  updateMetaTags(texts);
-
-  // 플레이스홀더 텍스트 업데이트
-  updatePlaceholders(texts);
-}
-
-function updateMetaTags(texts) {
-  if (texts.pageTitle) {
-    document.title = texts.pageTitle;
-  }
-
-  const descMeta = document.querySelector('meta[name="description"]');
-  if (descMeta && texts.pageDescription) {
-    descMeta.content = texts.pageDescription;
-  }
-
-  const keywordsMeta = document.querySelector('meta[name="keywords"]');
-  if (keywordsMeta && texts.pageKeywords) {
-    keywordsMeta.content = texts.pageKeywords;
-  }
-
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle && texts.pageTitle) {
-    ogTitle.content = texts.pageTitle;
-  }
-
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc && texts.pageDescription) {
-    ogDesc.content = texts.pageDescription;
-  }
-}
-
-function updatePlaceholders(texts) {
-  // 플레이스홀더 업데이트
-  const textInput = document.getElementById("textInput");
-  if (textInput && texts.textPlaceholder) {
-    textInput.placeholder = texts.textPlaceholder;
-  }
-
-  const inputValue = document.getElementById("inputValue");
-  if (inputValue && texts.inputValueLabel) {
-    inputValue.placeholder = texts.inputValueLabel;
-  }
-
-  // 결과 영역 기본 텍스트 업데이트
-  const textResult = document.getElementById("textResult");
-  if (
-    textResult &&
-    textResult.textContent.includes("변환된 텍스트가") &&
-    texts.textResultPlaceholder
-  ) {
-    textResult.textContent = texts.textResultPlaceholder;
-  }
-
-  const conversionResult = document.getElementById("conversionResult");
-  if (
-    conversionResult &&
-    conversionResult.textContent.includes("결과가") &&
-    texts.resultPlaceholder
-  ) {
-    conversionResult.textContent = texts.resultPlaceholder;
-  }
-}
-
-function loadSavedLanguage() {
-  const savedLang = localStorage.getItem("userLanguage");
-  if (savedLang && translations[savedLang]) {
-    setLanguage(savedLang);
-    return true;
-  }
-  return false;
-}
-
-function detectBrowserLanguage() {
-  const browserLang = navigator.language || navigator.userLanguage;
-
-  if (browserLang.startsWith("ko")) {
-    return "ko";
-  } else if (browserLang.startsWith("en")) {
-    return "en";
-  } else {
-    return "ko"; // 기본값
-  }
-}
-
-function initializeLanguage() {
-  console.log("Initializing language...");
-
-  // 저장된 언어가 있으면 사용
-  if (loadSavedLanguage()) {
-    return;
-  }
-
-  // 브라우저 언어 감지
-  const detectedLang = detectBrowserLanguage();
-  setLanguage(detectedLang);
-}
-*/
 // 전역 함수로 노출
 window.showPage = showPage;
 window.selectGame = selectGame;
 window.selectTool = selectTool;
 window.showCopyNotification = showCopyNotification;
-/*
-window.setLanguage = setLanguage;
-window.initializeLanguage = initializeLanguage;
-window.currentLanguage = currentLanguage;
-*/

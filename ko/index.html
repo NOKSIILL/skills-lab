@@ -2,15 +2,18 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <title>Onggeulda Skills Lab — Daily Skill Practice & Tools</title>
     <meta
       name="description"
-      content="Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구. Static Click, Flick, Tracking 등 실전형 연습 제공."
+      content="Onggeulda Skills Lab: 일상적인 게임 스킬 트레이닝과 창작 도구를 제공하는 웹사이트. FPS 에임 훈련, 반응속도 게임, 메모리 게임과 색상 팔레트, 단위 변환기 등 다양한 도구 제공. 회원가입 없이 무료로 이용하세요."
     />
     <meta
       name="keywords"
-      content="FPS 게임, 에임 훈련, 반응속도 게임, 온라인 게임, 무료 게임, 클릭 게임, 창작 도구, 색상 팔레트"
+      content="FPS 게임, 에임 훈련, 반응속도 테스트, 메모리 게임, 창작 도구, FPS 게임 연습, 무료 게임, 온라인 게임, 브라우저 게임, 색상 팔레트"
     />
     <meta name="author" content="Onggeulda Studio" />
     <meta name="robots" content="index, follow" />
@@ -22,37 +25,27 @@
     />
     <meta
       property="og:description"
-      content="Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구."
+      content="Onggeulda Skills Lab: 게임 실력 향상과 창작을 위한 다양한 도구를 제공하는 웹사이트입니다. 회원가입 없이 무료로 이용하세요."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://domain.com/" />
-    <meta
-      property="og:image"
-      content="https://domain.com/assets/images/og-image.jpg"
-    />
+    <meta property="og:image" content="/assets/images/og-image.jpg" />
     <meta property="og:locale" content="ko_KR" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Onggeulda Skills Lab — Daily Skill Practice & Tools"
-    />
-    <meta
-      name="twitter:description"
-      content="Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구."
-    />
-    <meta
-      name="twitter:image"
-      content="https://domain.com/assets/images/twitter-card.jpg"
-    />
+    <meta property="og:site_name" content="Onggeulda Skills Lab" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- Canonical URL -->
-    <!--<link rel="canonical" href="https://domain.com/" />-->
+    <link rel="canonical" href="https://domain.com/ko/" />
+
+    <link rel="alternate" hreflang="ko" href="https://domain.com/ko/" />
+    <link rel="alternate" hreflang="en" href="https://domain.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <!-- 헤더 -->
@@ -151,16 +144,10 @@
         <!-- 광고 영역 (데스크탑) -->
         <aside class="ad-sidebar desktop-only">
           <div class="ad-slot">
-            <div class="ad-placeholder">
-              광고 영역<br />
-              (애드센스/쿠팡파트너스)
-            </div>
+            <div class="ad-placeholder">ad</div>
           </div>
           <div class="ad-slot">
-            <div class="ad-placeholder">
-              광고 영역<br />
-              (애드센스/쿠팡파트너스)
-            </div>
+            <div class="ad-placeholder">ad</div>
           </div>
         </aside>
       </div>
@@ -170,16 +157,10 @@
     <div class="mobile-ads">
       <div class="ad-container">
         <div class="ad-slot">
-          <div class="ad-placeholder">
-            광고 영역 (애드센스/쿠팡파트너스)<br />
-            width : 728px
-          </div>
+          <div class="ad-placeholder">ad</div>
         </div>
         <div class="ad-slot">
-          <div class="ad-placeholder">
-            광고 영역 (애드센스/쿠팡파트너스)<br />
-            width : 728px
-          </div>
+          <div class="ad-placeholder">ad</div>
         </div>
       </div>
     </div>
@@ -191,7 +172,7 @@
     <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
 
     <!-- JavaScript -->
-    <script src="/assets/js/utils/helpers.js"></script>
+    <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>
     <script>
       // 배너 슬라이드 기능

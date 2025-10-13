@@ -1,51 +1,32 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>메모리 게임 - Onggeulda Skills Lab</title>
+    <title>Memory Game - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="기억력과 집중력 훈련을 위한 카드 매칭 메모리 게임"
+      content="A card matching memory game for training memory and concentration"
     />
     <meta
       name="keywords"
-      content="메모리 게임, 기억력, 집중력, 카드 매칭, 두뇌 훈련"
+      content="memory game, memory training, concentration, card matching, brain training"
     />
 
-    <meta property="og:title" content="메모리 게임 - Onggeulda Skills Lab" />
+    <meta property="og:title" content="Memory Game - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="기억력과 집중력 훈련을 위한 카드 매칭 메모리 게임"
+      content="A card matching memory game for training memory and concentration"
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://domain.com/ko/games/memory-game.html"
+      content="https://domain.com/games/memory-game.html"
     />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/games.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
-
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://domain.com/ko/[페이지-경로]"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://domain.com/en/[페이지-경로]"
-    />
-    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -56,18 +37,18 @@
 
         <main class="game-content">
           <div class="game-header">
-            <div class="game-title">🎪 메모리 게임</div>
+            <div class="game-title">🎪 Memory Game</div>
             <div class="game-stats">
               <div class="stat-item">
-                <div class="stat-label">점수</div>
+                <div class="stat-label">Score</div>
                 <div class="stat-value" id="memoryScore">0</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">매치</div>
+                <div class="stat-label">Matches</div>
                 <div class="stat-value" id="matches">0/8</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">시도</div>
+                <div class="stat-label">Attempts</div>
                 <div class="stat-value" id="moves">0</div>
               </div>
             </div>
@@ -77,16 +58,16 @@
             <div class="memory-game-container">
               <div class="memory-instructions">
                 <p>
-                  카드를 클릭해서 뒤집고, 같은 그림의 카드 두 개를
-                  매치하세요.<br />
-                  모든 카드를 매치하면 게임이 완료됩니다. <br />
-                  최소한의 시도로 완성해보세요!
+                  Click cards to flip them and match pairs with the same
+                  image.<br />
+                  Complete the game by matching all cards.<br />
+                  Try to finish with the minimum number of moves!
                 </p>
               </div>
               <div class="memory-grid" id="memoryGrid"></div>
               <div class="memory-controls">
                 <button class="tool-button" onclick="startMemoryGame()">
-                  새 게임
+                  New Game
                 </button>
               </div>
             </div>
@@ -119,7 +100,9 @@
 
     <footer class="footer-info"></footer>
 
-    <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
+    <div id="copyNotification" class="copy-notification">
+      Copied to clipboard!
+    </div>
 
     <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>

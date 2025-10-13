@@ -93,11 +93,11 @@ function updateColorStats() {
   const accuracyElement = document.getElementById("colorAccuracy");
 
   if (scoreElement) {
-    scoreElement.textContent = colorGameState.score;
+    scoreElement.innerHTML = colorGameState.score;
   }
 
   if (levelElement) {
-    levelElement.textContent = colorGameState.level;
+    levelElement.innerHTML = colorGameState.level;
   }
 
   if (accuracyElement) {
@@ -105,6 +105,6 @@ function updateColorStats() {
       colorGameState.total > 0
         ? Math.round((colorGameState.correct / colorGameState.total) * 100)
         : 100;
-    accuracyElement.textContent = accuracy + "%";
+    accuracyElement.innerHTML = accuracy + "%";
   }
 }

@@ -12,7 +12,7 @@ function resetReactionTest() {
   const text = document.getElementById("reactionText");
   if (area && text) {
     area.className = "reaction-area";
-    text.textContent = "클릭해서 시작하세요!";
+    text.innerHTML = "클릭해서 시작하세요!<br>Click to start!";
     reactionState.isWaiting = false;
   }
 }
@@ -27,13 +27,13 @@ function handleReactionClick() {
   if (!reactionState.isWaiting) {
     // 게임 시작
     area.className = "reaction-area waiting";
-    text.textContent = "초록색이 되면 클릭하세요!";
+    text.innerHTML = "초록색이 되면 클릭하세요!<br>Click when it turns green!";
     reactionState.isWaiting = true;
 
     setTimeout(() => {
       if (reactionState.isWaiting) {
         area.className = "reaction-area ready";
-        text.textContent = "지금 클릭!";
+        text.innerHTML = "지금 클릭!<br>Click now!";
         reactionState.startTime = Date.now();
       }
     }, Math.random() * 3000 + 1000);
@@ -46,7 +46,7 @@ function handleReactionClick() {
       reactionState.bestTime = reactionTime;
     }
 
-    text.textContent = `${reactionTime}ms!  클릭해서 다시 시도`;
+    text.innerHTML = `${reactionTime}ms!  클릭해서 다시 시도<br>${reactionTime}ms! Click to try again`;
     area.className = "reaction-area";
     reactionState.isWaiting = false;
 
@@ -54,7 +54,8 @@ function handleReactionClick() {
     updateReactionStats();
   } else {
     // 너무 빨리 클릭
-    text.textContent = "너무 빨라요!  클릭해서 다시 시도";
+    text.innerHTML =
+      "너무 빨라요!  클릭해서 다시 시도<br>Too soon! Click to try again";
     area.className = "reaction-area";
     reactionState.isWaiting = false;
   }
@@ -67,7 +68,7 @@ function updateReactionStats() {
   const attemptsElement = document.getElementById("attempts");
 
   if (bestElement) {
-    bestElement.textContent = reactionState.bestTime + "ms";
+    bestElement.innerHTML = reactionState.bestTime + "ms";
   }
 
   if (avgElement && reactionState.reactions.length > 0) {
@@ -75,10 +76,10 @@ function updateReactionStats() {
       reactionState.reactions.reduce((a, b) => a + b, 0) /
         reactionState.reactions.length
     );
-    avgElement.textContent = avg + "ms";
+    avgElement.innerHTML = avg + "ms";
   }
 
   if (attemptsElement) {
-    attemptsElement.textContent = reactionState.reactions.length;
+    attemptsElement.innerHTML = reactionState.reactions.length;
   }
 }

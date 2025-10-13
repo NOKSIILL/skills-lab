@@ -79,7 +79,7 @@ body {
 .sidebar-toggle {
   display: none;
   position: fixed;
-  top: 100px; /* 헤더 아래쪽으로 이동 */
+  top: 90px; /* 헤더 아래쪽으로 이동 */
   left: 20px;
   z-index: 10002; /* 사이드바보다 높게 설정 */
   width: 50px;
@@ -241,11 +241,11 @@ body {
   height: 100px;
 }
 
-.about-container .ad-sidebar {
+.ads-hide {
   display: none !important;
 }
 
-.ads-hide {
+.about-container .ad-sidebar {
   display: none !important;
 }
 
@@ -285,13 +285,13 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 12px;
-  border-radius: 8px;
+
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: none;
 }
 
 .footer-item:hover {
@@ -376,7 +376,6 @@ body {
 
   /* 헤더 아래 마진 */
   .main-container {
-    margin-top: 85px;
     padding: 0 40px;
   }
 
@@ -549,7 +548,7 @@ body {
 
   /* 헤더 아래 마진 */
   .main-container {
-    margin-top: 90px;
+    margin-top: 100px;
     padding: 0 20px;
   }
 
@@ -563,6 +562,7 @@ body {
   .tools-container {
     display: block !important;
     width: 100%;
+    margin-bottom: 3px;
   }
 
   .game-content,
@@ -577,6 +577,10 @@ body {
   }
 
   .logo {
+    font-size: 22px;
+  }
+
+  .logo-text {
     font-size: 22px;
   }
 
@@ -595,7 +599,7 @@ body {
   /* 배너 조정 */
   .hero-banner {
     height: 280px;
-    margin: 0 -20px;
+    margin: 10px -20px 0 -20px;
   }
 
   .banner-title {
@@ -726,7 +730,7 @@ body {
   }
 
   .main-container {
-    margin-top: 130px;
+    margin-top: 180px;
     padding: 0 15px;
   }
 
@@ -764,6 +768,10 @@ body {
     font-size: 20px;
   }
 
+  .logo-text {
+    font-size: 20px;
+  }
+
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
@@ -784,7 +792,7 @@ body {
   /* 배너 */
   .hero-banner {
     height: 220px;
-    margin: 0 -15px;
+    margin: 20px -15px 0 -15px;
     position: relative;
     z-index: 1;
   }
@@ -911,7 +919,18 @@ body {
   }
 
   .tool-area {
-    max-height: 550px;
+    min-height: 550px;
+  }
+
+  .text-transformer-form {
+    min-height: 600px;
+    max-height: 650px;
+  }
+
+  .transform-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-size: 14px;
   }
 
   /* 푸터 모바일에서 2x2 */
@@ -956,7 +975,7 @@ body {
 /* ===== 소형 모바일 (479px 이하) ===== */
 @media (max-width: 479px) {
   .main-container {
-    margin-top: 150px;
+    margin-top: 200px;
     padding: 0 10px;
   }
 
@@ -968,6 +987,10 @@ body {
     font-size: 18px;
   }
 
+  .logo-text {
+    font-size: 18px;
+  }
+
   .nav-item {
     padding: 10px 15px;
     font-size: 13px;
@@ -975,7 +998,7 @@ body {
 
   .hero-banner {
     height: 180px;
-    margin: 0 -10px;
+    margin: 20px -10px 0 -10px;
   }
 
   .banner-title {

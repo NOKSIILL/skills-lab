@@ -2,11 +2,14 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <title>문의하기 - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="Onggeulda Skills Lab에 대한 문의사항이나 건의사항을 보내주세요"
+      content="Onggeulda Skills Lab에 대한 문의사항이나 건의사항을 보내주세요."
     />
     <meta
       name="keywords"
@@ -16,13 +19,35 @@
     <meta property="og:title" content="문의하기 - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="문의사항이나 건의사항을 보내주세요"
+      content="Onggeulda Skills Lab에 대한 문의사항이나 건의사항을 보내주세요."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://domain.com/contact.html" />
+    <meta
+      property="og:url"
+      content="https://domain.com/ko/about/contact.html"
+    />
+    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
+
+    <link
+      rel="alternate"
+      hreflang="ko"
+      href="https://domain.com/ko/[페이지-경로]"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://domain.com/en/[페이지-경로]"
+    />
+    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -30,7 +55,7 @@
     <div class="main-container">
       <div class="about-container">
         <div class="about-content">
-          <div class="about-card">
+          <div class="about-card about-info">
             <div class="about-title">문의하기</div>
             <p>
               Onggeulda Skills Lab에 대한 문의사항이나 건의사항이 있으시면
@@ -58,104 +83,34 @@
               만들어가겠습니다!
             </p>
 
-            <div
-              style="
-                margin-top: 40px;
-                padding: 20px;
-                border: 1px solid rgba(0, 255, 136, 0.3);
-                border-radius: 10px;
-              "
-            >
-              <h3 style="color: #00ff88; margin-bottom: 15px">
-                📋 자주 묻는 질문
-              </h3>
-              <div
-                style="
-                  margin: 15px 0;
-                  padding: 15px;
-                  background: rgba(0, 255, 136, 0.1);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #00ff88">Q: 회원가입이 필요한가요?</strong
-                ><br />
+            <div class="about-box">
+              <h3>📋 자주 묻는 질문</h3>
+              <div>
+                <strong>Q: 회원가입이 필요한가요?</strong><br />
                 A: 아니요, 모든 게임과 도구는 회원가입 없이 바로 사용할 수
                 있습니다.
               </div>
-              <div
-                style="
-                  margin: 15px 0;
-                  padding: 15px;
-                  background: rgba(0, 255, 136, 0.1);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #00ff88"
-                  >Q: 모바일에서도 사용할 수 있나요?</strong
-                ><br />
+              <div>
+                <strong>Q: 모바일에서도 사용할 수 있나요?</strong><br />
                 A: 네, 모든 기능이 모바일과 태블릿에서도 최적화되어 작동합니다.
               </div>
-              <div
-                style="
-                  margin: 15px 0;
-                  padding: 15px;
-                  background: rgba(0, 255, 136, 0.1);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #00ff88"
-                  >Q: 게임 기록이 저장되나요?</strong
-                ><br />
+              <div>
+                <strong>Q: 게임 기록이 저장되나요?</strong><br />
                 A: 게임 기록은 브라우저에 로컬로 저장되며, 서버에는 저장되지
                 않습니다.
               </div>
-              <div
-                style="
-                  margin: 15px 0;
-                  padding: 15px;
-                  background: rgba(0, 255, 136, 0.1);
-                  border-radius: 5px;
-                "
-              >
-                <strong style="color: #00ff88"
-                  >Q: 새로운 게임 추가 예정이 있나요?</strong
-                ><br />
+              <div>
+                <strong>Q: 새로운 게임 추가 예정이 있나요?</strong><br />
                 A: 네, 지속적으로 새로운 게임과 도구를 추가할 예정입니다.
                 요청사항이 있으시면 언제든 연락주세요!
               </div>
             </div>
 
-            <div style="margin-top: 30px; text-align: center">
-              <a
-                href="mailto:contact@onggeulda.com"
-                style="
-                  display: inline-block;
-                  padding: 15px 30px;
-                  background: linear-gradient(45deg, #00ff88, #00cc6a);
-                  color: #1a1a2e;
-                  text-decoration: none;
-                  border-radius: 25px;
-                  font-weight: bold;
-                  margin: 10px;
-                "
-              >
+            <div class="about-btn">
+              <a href="mailto:onggeulda@onggeulda-studio.com">
                 📧 이메일 보내기
               </a>
-              <a
-                href="/ko/"
-                style="
-                  display: inline-block;
-                  padding: 15px 30px;
-                  background: linear-gradient(45deg, #00ff88, #00cc6a);
-                  color: #1a1a2e;
-                  text-decoration: none;
-                  border-radius: 25px;
-                  font-weight: bold;
-                  margin: 10px;
-                "
-              >
-                🏠 홈으로 돌아가기
-              </a>
+              <a href="/ko/"> 🏠 홈으로 돌아가기 </a>
             </div>
           </div>
         </div>
@@ -163,16 +118,10 @@
         <!-- 광고 영역 (데스크탑) -->
         <aside class="ad-sidebar desktop-only">
           <div class="ad-slot">
-            <div class="ad-placeholder">
-              광고 영역<br />
-              (애드센스/쿠팡파트너스)
-            </div>
+            <div class="ad-placeholder">ad</div>
           </div>
           <div class="ad-slot">
-            <div class="ad-placeholder">
-              광고 영역<br />
-              (애드센스/쿠팡파트너스)
-            </div>
+            <div class="ad-placeholder">ad</div>
           </div>
         </aside>
       </div>
@@ -182,23 +131,17 @@
     <div class="mobile-ads">
       <div class="ad-container">
         <div class="ad-slot">
-          <div class="ad-placeholder">
-            광고 영역 (애드센스/쿠팡파트너스)<br />
-            width : 728px
-          </div>
+          <div class="ad-placeholder">ad</div>
         </div>
         <div class="ad-slot">
-          <div class="ad-placeholder">
-            광고 영역 (애드센스/쿠팡파트너스)<br />
-            width : 728px
-          </div>
+          <div class="ad-placeholder">ad</div>
         </div>
       </div>
     </div>
 
     <footer class="footer-info"></footer>
 
-    <script src="/assets/js/utils/helpers.js"></script>
+    <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", async function () {

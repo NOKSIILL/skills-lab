@@ -33,7 +33,7 @@ function startGame() {
 function startGameTimer() {
   gameState.gameTimer = setInterval(() => {
     gameState.timeLeft--;
-    document.getElementById("timer").textContent = gameState.timeLeft;
+    document.getElementById("timer").innerHTML = gameState.timeLeft;
 
     if (gameState.timeLeft <= 0) {
       endGame();
@@ -104,7 +104,7 @@ function hitTarget(event) {
 function showHitEffect(target, text) {
   const effect = document.createElement("div");
   effect.className = "hit-effect";
-  effect.textContent = text;
+  effect.innerHTML = text;
   effect.style.left = target.style.left;
   effect.style.top = target.style.top;
 
@@ -119,7 +119,7 @@ function showHitEffect(target, text) {
 function showMissEffect(x, y) {
   const effect = document.createElement("div");
   effect.className = "miss-effect";
-  effect.textContent = "MISS";
+  effect.innerHTML = "MISS";
   effect.style.left = x + "px";
   effect.style.top = y + "px";
 
@@ -132,13 +132,13 @@ function showMissEffect(x, y) {
 
 // 통계 업데이트
 function updateStats() {
-  document.getElementById("score").textContent = gameState.score;
+  document.getElementById("score").innerHTML = gameState.score;
 
   const accuracy =
     gameState.totalClicks > 0
       ? Math.round((gameState.hits / gameState.totalClicks) * 100)
       : 100;
-  document.getElementById("accuracy").textContent = accuracy + "%";
+  document.getElementById("accuracy").innerHTML = accuracy + "%";
 
   const avgReaction =
     gameState.reactionTimes.length > 0
@@ -147,7 +147,7 @@ function updateStats() {
             gameState.reactionTimes.length
         )
       : 0;
-  document.getElementById("avgReaction").textContent = avgReaction + "ms";
+  document.getElementById("avgReaction").innerHTML = avgReaction + "ms";
 }
 
 // 게임 종료
@@ -160,18 +160,18 @@ function endGame() {
     gameState.currentTarget.remove();
   }
 
-  document.getElementById("finalScore").textContent = gameState.score;
-  document.getElementById("finalAccuracy").textContent =
+  document.getElementById("finalScore").innerHTML = gameState.score;
+  document.getElementById("finalAccuracy").innerHTML =
     Math.round((gameState.hits / Math.max(gameState.totalClicks, 1)) * 100) +
     "%";
-  document.getElementById("finalReaction").textContent =
+  document.getElementById("finalReaction").innerHTML =
     gameState.reactionTimes.length > 0
       ? Math.round(
           gameState.reactionTimes.reduce((a, b) => a + b, 0) /
             gameState.reactionTimes.length
         ) + "ms"
       : "0ms";
-  document.getElementById("finalHits").textContent = gameState.hits;
+  document.getElementById("finalHits").innerHTML = gameState.hits;
 
   document.getElementById("gameOver").style.display = "flex";
 }

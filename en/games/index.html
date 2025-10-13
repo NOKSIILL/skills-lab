@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>창작 도구 - Onggeulda Skills Lab</title>
+    <title>Games - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 창작 도구들"
+      content="Enjoy various online games such as FPS Aim Trainer, Reaction Test, Memory Game, and Color Match to improve your skills and have fun!"
     />
     <meta
       name="keywords"
-      content="창작 도구, 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 디자인 도구"
+      content="Online games, FPS games, reaction speed games, memory games, browser games, color matching games"
     />
 
-    <meta property="og:title" content="창작 도구 - Onggeulda Skills Lab" />
+    <meta property="og:title" content="Games - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 창작 도구들"
+      content="Enjoy various online games such as FPS Aim Trainer, Reaction Test, Memory Game, and Color Match to improve your skills and have fun!"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://domain.com/ko/tools/index.html" />
+    <meta property="og:url" content="https://domain.com/en/games/index.html" />
     <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/tools.css" />
+    <link rel="stylesheet" href="/assets/css/games.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
 
     <!-- Twitter Card -->
@@ -52,56 +52,57 @@
         <div class="home-content">
           <div class="sitemap-container">
             <div class="sitemap-section">
-              <div class="sitemap-title">🛠️ 창작 도구</div>
+              <div class="sitemap-title">🎮 Games</div>
               <ul class="sitemap-list">
                 <li
                   class="sitemap-item"
-                  onclick="window.location.href='/ko/tools/color-palette.html'"
+                  onclick="window.location.href='/en/games/fps-aim.html'"
                 >
-                  🎨 색상 팔레트 생성기
+                  🎯 FPS Aim Trainer
                 </li>
                 <li
                   class="sitemap-item"
-                  onclick="window.location.href='/ko/tools/keywords.html'"
+                  onclick="window.location.href='/en/games/reaction-test.html'"
                 >
-                  💡 오늘의 키워드
+                  🎲 Reaction Test
                 </li>
                 <li
                   class="sitemap-item"
-                  onclick="window.location.href='/ko/tools/unit-converter.html'"
+                  onclick="window.location.href='/en/games/memory-game.html'"
                 >
-                  📏 단위 변환기
+                  🎪 Memory Game
                 </li>
                 <li
                   class="sitemap-item"
-                  onclick="window.location.href='/ko/tools/text-transformer.html'"
+                  onclick="window.location.href='/en/games/color-match.html'"
                 >
-                  🔤 텍스트 변환기
+                  🎨 Color Match
                 </li>
               </ul>
             </div>
 
             <div class="sitemap-section">
-              <div class="sitemap-title">📋 도구 정보</div>
+              <div class="sitemap-title">📊 Game Info</div>
               <div class="sitemap-description">
                 <p>
-                  <strong>🎨 색상 팔레트 생성기</strong><br />
-                  창작을 위한 아름다운 색상 조합을 생성하는 도구입니다.
+                  <strong>🎯 FPS Aim Trainer</strong><br />
+                  A target-clicking game to improve your reaction speed and
+                  accuracy.
+                </p>
+                <p>
+                  <strong>🎲 Reaction Test</strong><br />
+                  A game to measure and enhance your instant reaction ability.
                 </p>
 
                 <p>
-                  <strong>💡 오늘의 키워드</strong><br />
-                  창작 영감을 위한 랜덤 키워드를 생성하는 도구입니다.
+                  <strong>🎪 Memory Game</strong><br />
+                  A card matching game for training memory and concentration.
                 </p>
 
                 <p>
-                  <strong>📏 단위 변환기</strong><br />
-                  디자인 작업용 다양한 단위를 변환하는 도구입니다.
-                </p>
-
-                <p>
-                  <strong>🔤 텍스트 변환기</strong><br />
-                  다양한 텍스트 변환 및 처리 기능을 제공하는 도구입니다.
+                  <strong>🎨 Color Match</strong><br />
+                  A color matching game to improve your sense of color and
+                  observation skills.
                 </p>
               </div>
             </div>
@@ -138,8 +139,8 @@
     <script src="/shared/js/component-loader.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
-        await ComponentLoader.init("tools");
-        console.log("Tools index page loaded");
+        await ComponentLoader.init("games");
+        console.log("Games index page loaded");
       });
     </script>
   </body>

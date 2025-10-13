@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>텍스트 변환기 - Onggeulda Skills Lab</title>
+    <title>Text Transformer - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="다양한 텍스트 변환 및 처리 기능을 제공하는 도구"
+      content="A tool providing various text transformation and processing functions"
     />
     <meta
       name="keywords"
-      content="텍스트 변환기, 텍스트 변환, 문자열 처리, 텍스트 도구, 대소문자 변환"
+      content="text transformer, text conversion, string processing, text tools, case converter, remove spaces, add spaces"
     />
 
-    <meta property="og:title" content="텍스트 변환기 - Onggeulda Skills Lab" />
+    <meta
+      property="og:title"
+      content="Text Transformer - Onggeulda Skills Lab"
+    />
     <meta
       property="og:description"
-      content="다양한 텍스트 변환 및 처리 기능을 제공하는 도구"
+      content="A tool providing various text transformation and processing functions"
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://domain.com/ko/tools/text-transformer.html"
+      content="https://domain.com/tools/text-transformer.html"
     />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/tools.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
-
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://domain.com/ko/[페이지-경로]"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://domain.com/en/[페이지-경로]"
-    />
-    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -56,7 +40,7 @@
 
         <main class="tool-content">
           <div class="tool-header">
-            <div class="tool-title">🔤 텍스트 변환기</div>
+            <div class="tool-title">🔤 Text Transformer</div>
             <div class="tool-stats">
               <!-- 도구 페이지는 통계가 없으므로 비워둠 -->
             </div>
@@ -64,55 +48,56 @@
 
           <div class="tool-area">
             <div class="tool-instructions">
-              <h2>텍스트 변환</h2>
+              <h2>Text Transformation</h2>
               <p>
-                한국어 : 한글 특성상 뒤집기, 공백 제거, 간격만 변환 제공<br />영어
-                : 모든 변환 제공
+                Korean: Due to Hangul characteristics, only reverse, remove
+                spaces, and spacing modifications are available<br />English:
+                All transformations are available
               </p>
             </div>
             <div class="text-transformer-form">
               <div class="input-section">
-                <label>변환할 텍스트 입력</label>
+                <label>Enter Text to Transform</label>
                 <textarea
                   id="textInput"
-                  placeholder="변환할 텍스트를 입력하세요."
+                  placeholder="Enter text to transform."
                 ></textarea>
               </div>
               <div class="transform-buttons">
                 <button class="tool-button" onclick="transformText('upper')">
-                  대문자
+                  Upper
                 </button>
                 <button class="tool-button" onclick="transformText('lower')">
-                  소문자
+                  Lower
                 </button>
                 <button class="tool-button" onclick="transformText('title')">
-                  제목
+                  Title
                 </button>
                 <button class="tool-button" onclick="transformText('reverse')">
-                  뒤집기
+                  Reverse
                 </button>
                 <button
                   class="tool-button"
                   onclick="transformText('removeSpaces')"
                 >
-                  공백 제거
+                  Remove Spaces
                 </button>
                 <button
                   class="tool-button"
                   onclick="transformText('addSpaces')"
                 >
-                  간격
+                  Add Spaces
                 </button>
               </div>
               <div class="result-section">
-                <label>결과</label>
-                <div id="textResult">변환된 텍스트가 여기에 표시됩니다.</div>
+                <label>Transformation Result</label>
+                <div id="textResult">Transformed text will appear here.</div>
               </div>
               <button
                 class="tool-button copy-result"
                 onclick="copyTransformedText()"
               >
-                결과 복사하기
+                Copy Result
               </button>
             </div>
           </div>
@@ -144,7 +129,9 @@
 
     <footer class="footer-info"></footer>
 
-    <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
+    <div id="copyNotification" class="copy-notification">
+      Copied to clipboard!
+    </div>
 
     <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>

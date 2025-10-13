@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Tools - Onggeulda Skills Lab</title>
+    <meta
+      name="description"
+      content="Useful creative tools such as color palette generator, keyword generator, unit converter, and text transformer, enhancing your productivity."
+    />
+    <meta
+      name="keywords"
+      content="creative tools, color palette, keyword generator, unit converter, text transformer, design tools, productivity tools"
+    />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/tools.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header"></header>
+
+    <div class="main-container">
+      <div class="home-layout">
+        <div class="home-content">
+          <div class="sitemap-container">
+            <div class="sitemap-section">
+              <div class="sitemap-title">🛠️ Creative Tools</div>
+              <ul class="sitemap-list">
+                <li
+                  class="sitemap-item"
+                  onclick="window.location.href='/en/tools/color-palette.html'"
+                >
+                  🎨 Color Palette Generator
+                </li>
+                <li
+                  class="sitemap-item"
+                  onclick="window.location.href='/en/tools/keywords.html'"
+                >
+                  💡 Today's Keywords
+                </li>
+                <li
+                  class="sitemap-item"
+                  onclick="window.location.href='/en/tools/unit-converter.html'"
+                >
+                  📏 Unit Converter
+                </li>
+                <li
+                  class="sitemap-item"
+                  onclick="window.location.href='/en/tools/text-transformer.html'"
+                >
+                  🔤 Text Transformer
+                </li>
+              </ul>
+            </div>
+
+            <div class="sitemap-section">
+              <div class="sitemap-title">📋 Tool Info</div>
+              <div class="sitemap-description">
+                <p>
+                  <strong>🎨 Color Palette Generator</strong><br />
+                  A tool for generating beautiful color combinations for
+                  creative work.
+                </p>
+
+                <p>
+                  <strong>💡 Today's Keywords</strong><br />
+                  A tool that generates random keywords to inspire creativity.
+                </p>
+
+                <p>
+                  <strong>📏 Unit Converter</strong><br />
+                  A tool for converting various units for design tasks.
+                </p>
+
+                <p>
+                  <strong>🔤 Text Transformer</strong><br />
+                  A tool that provides various text transformation and
+                  processing features.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 광고 영역 (데스크탑) -->
+        <aside class="ad-sidebar desktop-only">
+          <div class="ad-slot">
+            <div class="ad-placeholder">ad</div>
+          </div>
+          <div class="ad-slot">
+            <div class="ad-placeholder">ad</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- 모바일/태블릿 광고 -->
+    <div class="mobile-ads">
+      <div class="ad-container">
+        <div class="ad-slot">
+          <div class="ad-placeholder">ad</div>
+        </div>
+        <div class="ad-slot">
+          <div class="ad-placeholder">ad</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-info"></footer>
+
+    <script src="/utils/helpers.js"></script>
+    <script src="/shared/js/component-loader.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        await ComponentLoader.init("tools");
+        console.log("Tools index page loaded");
+      });
+    </script>
+  </body>
+</html>

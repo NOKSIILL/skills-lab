@@ -12,7 +12,8 @@ function convertUnits() {
   const toUnit = toUnitSelect.value;
 
   if (isNaN(value)) {
-    resultElement.textContent = "올바른 숫자를 입력하세요";
+    resultElement.innerHTML =
+      "올바른 숫자를 입력하세요.<br>Please enter a valid number.";
     return;
   }
 
@@ -45,12 +46,12 @@ function convertUnits() {
     displayResult = result.toFixed(4);
   }
 
-  resultElement.textContent = `${displayResult} ${toUnit}`;
+  resultElement.innerHTML = `${displayResult} ${toUnit}`;
 
   // 추가 정보 표시 (픽셀 기준값도 함께 표시)
   if (fromUnit !== "px" && toUnit !== "px") {
     const pxInfo = ` (${pxValue.toFixed(2)}px 기준)`;
-    resultElement.textContent += pxInfo;
+    resultElement.innerHTML += pxInfo;
   }
 }
 
@@ -59,20 +60,23 @@ function copyConversionResult() {
   const resultElement = document.getElementById("conversionResult");
   if (!resultElement) return;
 
-  const result = resultElement.textContent;
+  const result = resultElement.innerHTML;
   if (
     result &&
-    result !== "결과가 여기에 표시됩니다" &&
-    result !== "올바른 숫자를 입력하세요"
+    result !==
+      "결과가 여기에 표시됩니다.<br>The result will be displayed here." &&
+    result !== "올바른 숫자를 입력하세요.<br>Please enter a valid number."
   ) {
     copyToClipboard(result)
       .then(() => {
-        showCopyNotification("변환 결과가 복사되었습니다!");
+        showCopyNotification(
+          "변환 결과가 복사되었습니다!<br>Conversion result copied!"
+        );
       })
       .catch(() => {
-        alert("복사에 실패했습니다.");
+        alert("복사에 실패했습니다.<br>Failed to copy.");
       });
   } else {
-    showCopyNotification("복사할 결과가 없습니다");
+    showCopyNotification("복사할 결과가 없습니다.<br>No result to copy.");
   }
 }

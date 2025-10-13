@@ -20,10 +20,19 @@ class ComponentLoader {
   }
 
   static async loadHeader() {
-    const success = await this.loadComponent(
-      "header",
-      "/shared/components/header-ko.html"
-    );
+    const pathname = window.location.pathname;
+    let success;
+    if (pathname.startsWith("/ko/")) {
+      success = await this.loadComponent(
+        "header",
+        "/shared/components/headers/header-ko.html"
+      );
+    } else {
+      success = await this.loadComponent(
+        "header",
+        "/shared/components/headers/header-en.html"
+      );
+    }
     if (success) {
       this.initHeaderEvents();
       this.setActiveNavigation();
@@ -32,10 +41,19 @@ class ComponentLoader {
   }
 
   static async loadFooter() {
-    const success = await this.loadComponent(
-      "footer",
-      "/shared/components/footer-ko.html"
-    );
+    const pathname = window.location.pathname;
+    let success;
+    if (pathname.startsWith("/ko/")) {
+      success = await this.loadComponent(
+        "footer",
+        "/shared/components/footers/footer-ko.html"
+      );
+    } else {
+      success = await this.loadComponent(
+        "footer",
+        "/shared/components/footers/footer-en.html"
+      );
+    }
     if (success) {
       this.initFooterEvents();
     }
@@ -43,10 +61,20 @@ class ComponentLoader {
   }
 
   static async loadGameSidebar() {
-    const success = await this.loadComponent(
-      "#game-sidebar",
-      "/shared/game-sidebar.html"
-    );
+    const pathname = window.location.pathname;
+    let success;
+    if (pathname.startsWith("/ko/")) {
+      success = await this.loadComponent(
+        "#game-sidebar",
+        "/shared/components/sidebars/game-sidebar-ko.html"
+      );
+    } else {
+      success = await this.loadComponent(
+        "#game-sidebar",
+        "/shared/components/sidebars/game-sidebar-en.html"
+      );
+    }
+
     if (success) {
       this.initGameSidebarEvents();
     }
@@ -54,10 +82,20 @@ class ComponentLoader {
   }
 
   static async loadToolSidebar() {
-    const success = await this.loadComponent(
-      "#tool-sidebar",
-      "/shared/tool-sidebar.html"
-    );
+    const pathname = window.location.pathname;
+    let success;
+    if (pathname.startsWith("/ko/")) {
+      success = await this.loadComponent(
+        "#tool-sidebar",
+        "/shared/components/sidebars/tool-sidebar-ko.html"
+      );
+    } else {
+      success = await this.loadComponent(
+        "#tool-sidebar",
+        "/shared/components/sidebars/tool-sidebar-en.html"
+      );
+    }
+
     if (success) {
       this.initToolSidebarEvents();
     }
@@ -115,29 +153,53 @@ class ComponentLoader {
 
     const mobileSidebar = document.createElement("div");
     mobileSidebar.className = "sidebar-mobile";
-
+    const pathname = window.location.pathname;
     let sidebarContent = "";
 
     if (pageType === "games") {
-      sidebarContent = `
+      if (pathname.startsWith("/en/")) {
+        sidebarContent = `
+        <h3>🎯 Game List</h3>
+        <ul class="game-list">
+          <li class="game-item" data-game="fps-aim">🎯 FPS Aim Trainer</li>
+          <li class="game-item" data-game="reaction-test">🎲 Reaction Test</li>
+          <li class="game-item" data-game="memory-game">🎪 Memory Game</li>
+          <li class="game-item" data-game="color-match">🎨 Color Match</li>
+        </ul>
+      `;
+      } else {
+        sidebarContent = `
         <h3>🎯 게임 목록</h3>
         <ul class="game-list">
-          <li class="game-item" data-game="fps-aim" >🎯 FPS 에임 훈련</li>
-          <li class="game-item" data-game="reaction-test" >🎲 반응속도 테스트</li>
-          <li class="game-item" data-game="memory-game" >🎪 메모리 게임</li>
-          <li class="game-item" data-game="color-match" >🎨 색깔 맞추기</li>
+          <li class="game-item" data-game="fps-aim">🎯 FPS 에임 훈련</li>
+          <li class="game-item" data-game="reaction-test">🎲 반응속도 테스트</li>
+          <li class="game-item" data-game="memory-game">🎪 메모리 게임</li>
+          <li class="game-item" data-game="color-match">🎨 색깔 맞추기</li>
         </ul>
       `;
+      }
     } else if (pageType === "tools") {
-      sidebarContent = `
+      if (pathname.startsWith("/en/")) {
+        sidebarContent = `
+        <h3>🛠️ Tools</h3>
+        <ul class="tool-list">
+          <li class="tool-item" data-tool="color-palette">🎨 Color Palette Generator</li>
+          <li class="tool-item" data-tool="keywords">💡 Today's Keywords</li>
+          <li class="tool-item" data-tool="unit-converter">📏 Unit Converter</li>
+          <li class="tool-item" data-tool="text-transformer">🔤 Text Transformer</li>
+        </ul>
+      `;
+      } else {
+        sidebarContent = `
         <h3>🛠️ 도구 목록</h3>
         <ul class="tool-list">
-          <li class="tool-item" data-tool="color-palette" >🎨 색상 팔레트 생성기</li>
-          <li class="tool-item" data-tool="keywords" >💡 오늘의 키워드</li>
+          <li class="tool-item" data-tool="color-palette">🎨 색상 팔레트 생성기</li>
+          <li class="tool-item" data-tool="keywords">💡 오늘의 키워드</li>
           <li class="tool-item" data-tool="unit-converter">📏 단위 변환기</li>
-          <li class="tool-item" data-tool="text-transformer" >🔤 텍스트 변환기</li>
+          <li class="tool-item" data-tool="text-transformer">🔤 텍스트 변환기</li>
         </ul>
       `;
+      }
     }
 
     mobileSidebar.innerHTML = sidebarContent;
@@ -264,6 +326,7 @@ class ComponentLoader {
   }
 
   static initMobileGameSidebarEvents() {
+    const pathname = window.location.pathname;
     document.querySelectorAll(".sidebar-mobile .game-item").forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -272,14 +335,18 @@ class ComponentLoader {
         if (game) {
           // 사이드바 닫기
           this.closeSidebar();
-          // 페이지 이동
-          window.location.href = `/ko/games/${game}.html`;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/games/${game}.html`;
+          } else {
+            window.location.href = `/en/games/${game}.html`;
+          }
         }
       });
     });
   }
 
   static initMobileToolSidebarEvents() {
+    const pathname = window.location.pathname;
     document.querySelectorAll(".sidebar-mobile .tool-item").forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -288,8 +355,11 @@ class ComponentLoader {
         if (tool) {
           // 사이드바 닫기
           this.closeSidebar();
-          // 페이지 이동
-          window.location.href = `/ko/tools/${tool}.html`;
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/tools/${tool}.html`;
+          } else {
+            window.location.href = `/en/tools/${tool}.html`;
+          }
         }
       });
     });
@@ -326,11 +396,11 @@ class ComponentLoader {
     const logo = document.querySelector(".logo");
     if (logo) {
       logo.addEventListener("click", (e) => {
-        const href = item.getAttribute("href");
         e.preventDefault();
-        if (href.startsWith("/ko/")) {
+        const pathname = window.location.pathname;
+        if (pathname.startsWith("/ko/")) {
           window.location.href = "/ko/";
-        } else if (href.startsWith("/en/")) {
+        } else if (pathname.startsWith("/en/")) {
           window.location.href = "/en/";
         } else {
           window.location.href = "/";
@@ -348,6 +418,18 @@ class ComponentLoader {
         e.preventDefault();
       });
     });
+
+    // 언어 버튼 이벤트 추가
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = btn.dataset.lang;
+        console.log("Language button clicked:", lang);
+        if (lang && typeof window.setLanguage === "function") {
+          window.setLanguage(lang);
+        }
+      });
+    });
   }
 
   static initFooterEvents() {
@@ -356,8 +438,27 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const page = item.dataset.page;
+        const pathname = window.location.pathname;
         if (page) {
-          window.location.href = `/ko/about/${page}.html`;
+          //window.location.href = `/ko/about/${page}.html`;
+
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/about/${page}.html`;
+          } else {
+            window.location.href = `/en/about/${page}.html`;
+          }
+        }
+      });
+    });
+
+    // 언어 버튼 이벤트 추가
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = btn.dataset.lang;
+        console.log("Language button clicked:", lang);
+        if (lang && typeof window.setLanguage === "function") {
+          window.setLanguage(lang);
         }
       });
     });
@@ -368,9 +469,16 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const game = item.dataset.game;
+        const pathname = window.location.pathname;
         console.log("Game sidebar item clicked:", game);
         if (game) {
-          window.location.href = `/ko/games/${game}.html`;
+          //window.location.href = `/ko/games/${game}.html`;
+
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/games/${game}.html`;
+          } else {
+            window.location.href = `/en/games/${game}.html`;
+          }
         }
       });
     });
@@ -382,9 +490,16 @@ class ComponentLoader {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const tool = item.dataset.tool;
+        const pathname = window.location.pathname;
         console.log("Tool sidebar item clicked:", tool);
         if (tool) {
-          window.location.href = `/ko/tools/${tool}.html`;
+          //window.location.href = `/ko/tools/${tool}.html`;
+
+          if (pathname.startsWith("/ko/")) {
+            window.location.href = `/ko/tools/${tool}.html`;
+          } else {
+            window.location.href = `/en/tools/${tool}.html`;
+          }
         }
       });
     });
@@ -397,8 +512,40 @@ class ComponentLoader {
     document.querySelectorAll(".nav-item").forEach((item) => {
       item.classList.remove("active");
       const href = item.getAttribute("href");
-      //console.log("Checking nav item:", href); // 디버깅
+      const pathname = window.location.pathname;
 
+      let isActive = false;
+      if (pathname.startsWith("/ko/")) {
+        isActive =
+          href === currentPath ||
+          (currentPath === "/" && href === "/") ||
+          (currentPath.startsWith("/ko/games") && href === "/ko/games/") ||
+          (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
+          (currentPath.includes("/ko/about") &&
+            href === "/ko/about/about.html") ||
+          ((currentPath === "/ko/about/about.html" ||
+            currentPath === "/ko/about/about") &&
+            (href === "/ko/about/about.html" || href === "/ko/about/about"));
+      } else if (pathname.startsWith("/en/")) {
+        isActive =
+          href === currentPath ||
+          (currentPath === "/" && href === "/") ||
+          (currentPath.startsWith("/en/games") && href === "/en/games/") ||
+          (currentPath.startsWith("/en/tools") && href === "/en/tools/") ||
+          (currentPath.includes("/en/about") &&
+            href === "/en/about/about.html") ||
+          ((currentPath === "/en/about/about.html" ||
+            currentPath === "/en/about/about") &&
+            (href === "/en/about/about.html" || href === "/en/about/about"));
+      } else {
+        isActive = href === currentPath;
+      }
+
+      if (isActive) {
+        item.classList.add("active");
+      }
+
+      /*
       if (
         href === currentPath ||
         (currentPath === "/" && href === "/") ||
@@ -406,10 +553,6 @@ class ComponentLoader {
         (currentPath.startsWith("/ko/tools") && href === "/ko/tools/") ||
         (currentPath.includes("/ko/about") &&
           href === "/ko/about/about.html") ||
-        // about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
-        //(currentPath.startsWith("/about/") && href === "/about/about.html")
-        // 푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
-        //(currentPath === "/about/about.html" && href === "/about/about.html")
         //about 경로를 유연하게 매칭
         ((currentPath === "/ko/about/about.html" ||
           currentPath === "/ko/about/about") &&
@@ -418,8 +561,18 @@ class ComponentLoader {
         item.classList.add("active");
         //console.log("Activated nav item:", href); // 디버깅
       }
+*/
     });
   }
+
+  /* 
+  //about 폴더 하위 모든 페이지에 대해 소개 메뉴 활성화
+  (currentPath.startsWith("/about/") && href === "/about/about.html")
+  */
+  /* 
+  //푸터에서 about 페이지로 갈 때 헤더의 소개 메뉴 활성화
+  (currentPath === "/about/about.html" && href === "/about/about.html")
+  */
 
   static setActiveGameSidebar(gameId) {
     setTimeout(() => {

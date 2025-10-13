@@ -26,15 +26,15 @@ function generateColorPalette() {
 
     const colorCode = document.createElement("div");
     colorCode.className = "color-code";
-    colorCode.textContent = hexColor;
+    colorCode.innerHTML = hexColor;
 
     colorBox.addEventListener("click", () => {
       copyToClipboard(hexColor)
         .then(() => {
-          showCopyNotification(`${hexColor} 복사됨`);
+          showCopyNotification(`${hexColor} 복사됨<br>${hexColor} copied!`);
         })
         .catch(() => {
-          alert("복사에 실패했습니다.");
+          alert("복사에 실패했습니다.</br>Failed to copy.");
         });
     });
 
@@ -51,9 +51,13 @@ function copyPalette() {
 
   copyToClipboard(colors.join(", "))
     .then(() => {
-      showCopyNotification("전체 색상 코드가 복사되었습니다!");
+      showCopyNotification(
+        "전체 색상 코드가 복사되었습니다!<br>All color codes have been copied!"
+      );
     })
     .catch(() => {
-      alert("복사에 실패했습니다. 다시 시도해주세요.");
+      alert(
+        "복사에 실패했습니다. 다시 시도해주세요.</br>Failed to copy. Please try again."
+      );
     });
 }

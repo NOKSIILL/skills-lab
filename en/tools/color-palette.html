@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>색상 팔레트 생성기 - Onggeulda Skills Lab</title>
+    <title>Color Palette Generator - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="창작을 위한 아름다운 색상 조합을 생성하는 도구"
+      content="A tool for generating beautiful color combinations for your creative projects"
     />
     <meta
       name="keywords"
-      content="색상 팔레트, 색상 생성기, 디자인 도구, 창작 도구, 컬러 팔레트"
+      content="color palette, color generator, design tools, creative tools, color schemes, art tools"
     />
 
     <meta
       property="og:title"
-      content="색상 팔레트 생성기 - Onggeulda Skills Lab"
+      content="Color Palette Generator - Onggeulda Skills Lab"
     />
     <meta
       property="og:description"
-      content="창작을 위한 아름다운 색상 조합을 생성하는 도구"
+      content="A tool for generating beautiful color combinations for your creative projects"
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://domain.com/ko/tools/color-palette.html"
+      content="https://domain.com/tools/color-palette.html"
     />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/tools.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
-
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://domain.com/ko/[페이지-경로]"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://domain.com/en/[페이지-경로]"
-    />
-    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -59,7 +40,7 @@
 
         <main class="tool-content">
           <div class="tool-header">
-            <div class="tool-title">🎨 색상 팔레트 생성기</div>
+            <div class="tool-title">🎨 Color Palette Generator</div>
             <div class="tool-stats">
               <!-- 도구 페이지는 통계가 없으므로 비워둠 -->
             </div>
@@ -67,19 +48,19 @@
 
           <div class="tool-area">
             <div class="tool-instructions">
-              <h2>창작에 영감을 주는 색상 조합</h2>
+              <h2>Inspiring Color Combinations for Creativity</h2>
               <p>
-                아름다운 색상 팔레트를 생성하고 창작 프로젝트에 활용하세요. 각
-                색상을 클릭하면 색상 코드가 복사됩니다.
+                Generate beautiful color palettes for your creative projects.
+                Click on any color to copy its color code.
               </p>
             </div>
             <div class="color-palette" id="colorPalette"></div>
             <div class="tool-controls">
               <button class="tool-button" onclick="generateColorPalette()">
-                새 팔레트 생성
+                Generate New Palette
               </button>
               <button class="tool-button" onclick="copyPalette()">
-                전체 색상 코드 복사
+                Copy All Color Codes
               </button>
             </div>
           </div>
@@ -111,7 +92,9 @@
 
     <footer class="footer-info"></footer>
 
-    <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
+    <div id="copyNotification" class="copy-notification">
+      Copied to clipboard!
+    </div>
 
     <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>

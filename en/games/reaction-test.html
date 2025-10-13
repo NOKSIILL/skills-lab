@@ -1,54 +1,32 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>반응속도 테스트 - Onggeulda Skills Lab</title>
+    <title>Reaction Test - Onggeulda Skills Lab</title>
     <meta
       name="description"
-      content="순간 반응 능력을 측정하고 개선할 수 있는 반응속도 테스트 게임"
+      content="Test and improve your reaction speed with our reaction time measurement game"
     />
     <meta
       name="keywords"
-      content="반응속도, 반응속도 테스트, 순간 반응, 반사신경, 온라인 게임"
+      content="reaction time, reaction test, reflexes, online game, reaction speed test, reaction measurement, reflex training"
     />
 
-    <meta
-      property="og:title"
-      content="반응속도 테스트 - Onggeulda Skills Lab"
-    />
+    <meta property="og:title" content="Reaction Test - Onggeulda Skills Lab" />
     <meta
       property="og:description"
-      content="순간 반응 능력을 측정하고 개선할 수 있는 반응속도 테스트 게임"
+      content="Test and improve your reaction speed with our reaction time measurement game"
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://domain.com/ko/games/reaction-test.html"
+      content="https://domain.com/games/reaction-test.html"
     />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/games.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://domain.com/ko/[페이지-경로]" />
-
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://domain.com/ko/[페이지-경로]"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://domain.com/en/[페이지-경로]"
-    />
-    <link rel="alternate" hreflang="x-default" href="https://domain.com/en/" />
   </head>
   <body>
     <header class="site-header"></header>
@@ -59,18 +37,18 @@
 
         <main class="game-content">
           <div class="game-header">
-            <div class="game-title">🎲 반응속도 테스트</div>
+            <div class="game-title">🎲 Reaction Test</div>
             <div class="game-stats">
               <div class="stat-item">
-                <div class="stat-label">최고 기록</div>
+                <div class="stat-label">Best Record</div>
                 <div class="stat-value" id="bestReaction">0ms</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">평균 기록</div>
+                <div class="stat-label">Best Record</div>
                 <div class="stat-value" id="avgReactionTime">0ms</div>
               </div>
               <div class="stat-item">
-                <div class="stat-label">시도 횟수</div>
+                <div class="stat-label">Attempts</div>
                 <div class="stat-value" id="attempts">0</div>
               </div>
             </div>
@@ -82,7 +60,7 @@
               id="reactionArea"
               onclick="handleReactionClick()"
             >
-              <div id="reactionText">클릭해서 시작하세요!</div>
+              <div id="reactionText">Click to start!</div>
             </div>
           </div>
         </main>
@@ -113,7 +91,9 @@
 
     <footer class="footer-info"></footer>
 
-    <div id="copyNotification" class="copy-notification">복사되었습니다!</div>
+    <div id="copyNotification" class="copy-notification">
+      Copied to clipboard!
+    </div>
 
     <script src="/utils/helpers.js"></script>
     <script src="/shared/js/component-loader.js"></script>
