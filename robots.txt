@@ -1,12 +1,11 @@
 User-agent: *
 Allow: /
 
-# 개발 및 테스트 파일 차단
+# Block development and test files
 Disallow: /index-lang.html
 Disallow: *.tmp
 Disallow: *.backup
 Disallow: *.dev
 
-# 사이트맵 위치
-Sitemap: https://onggeulda-skills-lab.com/sitemap-ko.xml  
-Sitemap: https://onggeulda-skills-lab.com/sitemap-en.xml
+# Sitemap location
+Sitemap: https://onggeulda-skills-lab.com/sitemap.xml
