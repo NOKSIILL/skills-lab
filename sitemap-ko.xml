@@ -5,18 +5,18 @@
     <!-- 홈페이지 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/"/>
         <xhtml:link rel="alternate" hreflang="ko" href="https://onggeulda-skills-lab.com/ko/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://onggeulda-skills-lab.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://onggeulda-skills-lab.com/en/"/>
     </url>
     
     <!-- 게임 섹션 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/games/</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/games/"/>
@@ -26,7 +26,7 @@
     <!-- FPS 에임 훈련 게임 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/games/fps-aim.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/games/fps-aim.html"/>
@@ -36,7 +36,7 @@
     <!-- 반응속도 테스트 게임 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/games/reaction-test.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/games/reaction-test.html"/>
@@ -46,7 +46,7 @@
     <!-- 메모리 게임 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/games/memory-game.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/games/memory-game.html"/>
@@ -56,7 +56,7 @@
     <!-- 색깔 맞추기 게임 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/games/color-match.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/games/color-match.html"/>
@@ -66,7 +66,7 @@
     <!-- 도구 섹션 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/tools/</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/tools/"/>
@@ -76,7 +76,7 @@
     <!-- 색상 팔레트 생성기 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/tools/color-palette.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/tools/color-palette.html"/>
@@ -86,7 +86,7 @@
     <!-- 키워드 생성기 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/tools/keywords.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/tools/keywords.html"/>
@@ -96,7 +96,7 @@
     <!-- 단위 변환기 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/tools/unit-converter.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/tools/unit-converter.html"/>
@@ -106,7 +106,7 @@
     <!-- 텍스트 변환기 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/tools/text-transformer.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/tools/text-transformer.html"/>
@@ -116,7 +116,7 @@
     <!-- 소개 페이지 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/about/about.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/about/about.html"/>
@@ -126,7 +126,7 @@
     <!-- 문의하기 페이지 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/about/contact.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/about/contact.html"/>
@@ -136,7 +136,7 @@
     <!-- 개인정보처리방침 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/about/privacy.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/about/privacy.html"/>
@@ -146,7 +146,7 @@
     <!-- 이용약관 -->
     <url>
         <loc>https://onggeulda-skills-lab.com/ko/about/terms.html</loc>
-        <lastmod>2024-01-01T10:00:00Z</lastmod>
+        <lastmod>2025-09-15T10:00:00Z</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://onggeulda-skills-lab.com/en/about/terms.html"/>
