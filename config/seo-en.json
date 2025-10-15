@@ -1,0 +1,124 @@
+{
+  "defaultMeta": {
+    "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
+    "description": "Onggeulda Skills Lab: Daily skill training games and creative tools. Enjoy FPS Aim Trainer, Reaction Test, Memory Game, Color Match, Color Palette Generator, Keyword Generator, Unit Converter, Text Transformer and more. Free to use, no registration required.",
+    "keywords": "FPS game, aim training, reaction speed game, memory game, color match, color palette, keyword generator, unit converter, text transformer, creative tools, online game, free game, browser game",
+    "author": "Onggeulda Studio",
+    "robots": "index, follow",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "theme-color": "#00ff88"
+  },
+  "openGraph": {
+    "type": "website",
+    "site_name": "Onggeulda Skills Lab",
+    "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
+    "description": "Onggeulda Skills Lab: Daily skill training and creative tools. FPS Aim Trainer, Reaction Test, Memory Game, Color Match and more.",
+    "image": "assets/images/og-image.jpg",
+    "url": "https://onggeulda-skills-lab.com/en/",
+    "locale": "en_EN"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@onggeulda_skill_lab",
+    "creator": "@onggeulda_studio",
+    "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
+    "description": "Onggeulda Skills Lab: Daily skill training and creative tools. FPS Aim Trainer, Reaction Test, Memory Game, Color Match and more.",
+    "image": "assets/images/twitter-card.jpg"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Onggeulda Skills Lab",
+    "description": "Web application providing FPS aim training, reaction test, memory game, color match, and creative tools.",
+    "url": "https://onggeulda-skills-lab.com/en/",
+    "applicationCategory": "Game",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "FPS Aim Trainer",
+      "Reaction Test",
+      "Memory Game",
+      "Color Match",
+      "Color Palette Generator",
+      "Keyword Generator",
+      "Unit Converter",
+      "Text Transformer"
+    ]
+  },
+  "pageSpecific": {
+    "games": {
+      "title": "Games - Onggeulda Skills Lab",
+      "description": "Enjoy various online games such as FPS Aim Trainer, Reaction Test, Memory Game, and Color Match to improve your skills and have fun!",
+      "keywords": "Online games, FPS games, reaction speed games, memory games, browser games, color matching games"
+    },
+    "tools": {
+      "title": "Creative Tools - Onggeulda Skills Lab",
+      "description": "Useful creative tools such as color palette generator, keyword generator, unit converter, and text transformer, enhancing your productivity.",
+      "keywords": "creative tools, color palette, keyword generator, unit converter, text transformer, design tools, productivity tools"
+    },
+    "about": {
+      "title": "About & Policy - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab is a website providing daily skill training games and simple creative tools. Free to use with no registration required. See our Privacy Policy and Terms of Service.",
+      "keywords": "skill training, online games, creative tools, web applications, privacy policy, terms of service"
+    },
+    "fpsAim": {
+      "title": "FPS Aim Trainer - Onggeulda Skills Lab",
+      "description": "Aim training game for improving FPS game skills. Enhance your reaction time and accuracy.",
+      "keywords": "FPS game, aim training, reaction time, accuracy, online game, skills improvement"
+    },
+    "reactionTest": {
+      "title": "Reaction Test - Onggeulda Skills Lab",
+      "description": "Test and improve your reaction speed with our reaction time measurement game.",
+      "keywords": "reaction time, reaction test, reflexes, online game, reaction speed test, reaction measurement, reflex training"
+    },
+    "memoryGame": {
+      "title": "Memory Game - Onggeulda Skills Lab",
+      "description": "A card matching memory game for training memory and concentration.",
+      "keywords": "memory game, memory training, concentration, card matching, brain training"
+    },
+    "colorMatch": {
+      "title": "Color Match - Onggeulda Skills Lab",
+      "description": "A color matching game to improve color perception and observation skills.",
+      "keywords": "color matching, color perception, observation skills, visual training, color game, brain training"
+    },
+    "colorPalette": {
+      "title": "Color Palette Generator - Onggeulda Skills Lab",
+      "description": "A tool for generating beautiful color combinations for your creative projects.",
+      "keywords": "color palette, color generator, design tools, creative tools, color schemes, art tools"
+    },
+    "keywords": {
+      "title": "Today's Keywords - Onggeulda Skills Lab",
+      "description": "Random keyword generator for creative inspiration.",
+      "keywords": "keyword generator, creative inspiration, random keywords, ideas, brainstorming, creativity tool"
+    },
+    "unitConverter": {
+      "title": "Unit Converter - Onggeulda Skills Lab",
+      "description": "Various unit conversion tools for design work.",
+      "keywords": "unit converter, pixel conversion, design tools, unit calculator, px pt em rem in cm mm, web design tools"
+    },
+    "textTransformer": {
+      "title": "Text Transformer - Onggeulda Skills Lab",
+      "description": "A tool providing various text transformation and processing functions.",
+      "keywords": "text transformer, text conversion, string processing, text tools, case converter, remove spaces, add spaces"
+    },
+    "terms": {
+      "title": "Terms of Service - Onggeulda Skills Lab",
+      "description": "Terms of Service for Onggeulda Skills Lab.",
+      "keywords": "terms of service, service agreement, terms of use, terms and conditions"
+    },
+    "privacy": {
+      "title": "Privacy Policy - Onggeulda Skills Lab",
+      "description": "Privacy Policy of Onggeulda Skills Lab.",
+      "keywords": "privacy policy, data protection, terms of service, privacy"
+    },
+    "contact": {
+      "title": "Contact Us - Onggeulda Skills Lab",
+      "description": "Send us your inquiries or suggestions about Onggeulda Skills Lab.",
+      "keywords": "contact us, contact info, feedback, suggestions, customer support"
+    }
+  }
+}

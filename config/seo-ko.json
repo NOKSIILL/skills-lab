@@ -1,8 +1,8 @@
 {
   "defaultMeta": {
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
-    "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구. Static Click, Flick, Tracking 등 실전형 연습 제공.",
-    "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 온라인 게임, 무료 게임, 클릭 게임, 창작 도구, 색상 팔레트",
+    "description": "FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 등 다양한 게임과 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 창작 도구를 무료로 제공합니다.",
+    "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 메모리 게임, 색깔 맞추기, 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 창작 도구, 무료 게임, 온라인 게임, 브라우저 게임",
     "author": "Onggeulda Studio",
     "robots": "index, follow",
     "viewport": "width=device-width, initial-scale=1.0",
@@ -30,7 +30,7 @@
     "@type": "WebApplication",
     "name": "Onggeulda Skills Lab",
     "description": "FPS 에임 훈련과 창작 도구를 제공하는 웹 애플리케이션",
-    "url": "https://yourdomain.com",
+    "url": "https://onggeulda-skills-lab.com",
     "applicationCategory": "Game",
     "operatingSystem": "Web Browser",
     "offers": {
@@ -51,19 +51,19 @@
   },
   "pageSpecific": {
     "games": {
-      "title": "게임 - 게임 허브",
-      "description": "FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 게임을 즐기세요.",
-      "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 메모리 게임, 색깔 맞추기"
+      "title": "게임 - Onggeulda Skills Lab",
+      "description": "FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 등 다양한 온라인 게임을 즐기세요.",
+      "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 메모리 게임, 색깔 맞추기, 시각 훈련, 두뇌 훈련"
     },
     "tools": {
-      "title": "창작 도구 - 게임 허브",
-      "description": "색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 도구들.",
-      "keywords": "색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 창작 도구"
+      "title": "창작 도구 - Onggeulda Skills Lab",
+      "description": "색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 창작 도구를 제공합니다.",
+      "keywords": "색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 디자인 도구, 창작 도구"
     },
     "about": {
-      "title": "소개 - 게임 허브",
-      "description": "게임 허브는 재미있는 게임과 유용한 창작 도구를 한 곳에서 제공하는 웹사이트입니다.",
-      "keywords": "게임 허브, 소개, 웹 게임, 온라인 도구"
+      "title": "소개 및 정책 - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab은 재미있는 게임과 유용한 창작 도구를 한 곳에서 제공하는 웹사이트입니다. 개인정보처리방침, 이용약관 등 정책 정보를 확인하세요.",
+      "keywords": "게임 허브, 소개, 개인정보처리방침, 이용약관, 웹 게임, 온라인 도구"
     }
   }
 }

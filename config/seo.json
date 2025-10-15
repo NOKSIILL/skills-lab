@@ -30,7 +30,7 @@
     "@type": "WebApplication",
     "name": "Onggeulda Skills Lab",
     "description": "FPS 에임 훈련과 창작 도구를 제공하는 웹 애플리케이션",
-    "url": "https://yourdomain.com",
+    "url": "https://onggeulda-skills-lab.com",
     "applicationCategory": "Game",
     "operatingSystem": "Web Browser",
     "offers": {
