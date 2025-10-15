@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Onggeulda Skills Lab</title>
+        <description>FPS aim training, reaction speed tests, memory games, color matching games and creative tools</description>
+        <link>https://onggeulda-skills-lab.com/</link>
+        <language>en</language>
+        <atom:link href="https://onggeulda-skills-lab.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 15 Oct 2025 10:00:00 GMT</lastBuildDate>
+        <generator>Onggeulda Skills Lab</generator>
+        <category>Games</category>
+        <category>Tools</category>
+        
+        <item>
+            <title>Onggeulda Skills Lab Launch</title>
+            <description>All-in-one web application providing FPS aim training, reaction speed tests, memory games, color matching games and various creative tools</description>
+            <link>https://onggeulda-skills-lab.com/</link>
+            <guid>https://onggeulda-skills-lab.com/</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Launch</category>
+        </item>
+    </channel>
+</rss>

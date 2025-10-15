@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Onggeulda Skills Lab</title>
+        <description>FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 게임과 다양한 창작 도구를 제공하는 올인원 웹 애플리케이션입니다.</description>
+        <link>https://onggeulda-skills-lab.com/ko/</link>
+        <language>ko</language>
+        <atom:link href="https://onggeulda-skills-lab.com/feed-ko.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 15 Oct 2025 10:00:00 GMT</lastBuildDate>
+        <generator>Onggeulda Skills Lab</generator>
+        <category>게임</category>
+        <category>창작 도구</category>
+        
+        <!-- 게임 섹션 -->
+        <item>
+            <title>FPS 에임 훈련</title>
+            <description>반응속도와 정확도 향상을 위한 타겟 클릭 게임</description>
+            <link>https://onggeulda-skills-lab.com/ko/games/fps-aim.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/games/fps-aim.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>게임</category>
+        </item>
+        
+        <item>
+            <title>반응속도 테스트</title>
+            <description>순간 반응 능력 측정 게임</description>
+            <link>https://onggeulda-skills-lab.com/ko/games/reaction-test.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/games/reaction-test.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>게임</category>
+        </item>
+        
+        <item>
+            <title>메모리 게임</title>
+            <description>기억력과 집중력 훈련을 위한 카드 매칭 게임</description>
+            <link>https://onggeulda-skills-lab.com/ko/games/memory-game.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/games/memory-game.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>게임</category>
+        </item>
+        
+        <item>
+            <title>색깔 맞추기</title>
+            <description>색감과 관찰력 향상을 위한 색상 매칭 게임</description>
+            <link>https://onggeulda-skills-lab.com/ko/games/color-match.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/games/color-match.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>게임</category>
+        </item>
+        
+        <!-- 창작 도구 섹션 -->
+        <item>
+            <title>색상 팔레트 생성기</title>
+            <description>창작을 위한 아름다운 색상 조합 생성</description>
+            <link>https://onggeulda-skills-lab.com/ko/tools/color-palette.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/tools/color-palette.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>창작 도구</category>
+        </item>
+        
+        <item>
+            <title>오늘의 키워드</title>
+            <description>창작 영감을 위한 랜덤 키워드 생성</description>
+            <link>https://onggeulda-skills-lab.com/ko/tools/keywords.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/tools/keywords.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>창작 도구</category>
+        </item>
+        
+        <item>
+            <title>단위 변환기</title>
+            <description>디자인 작업용 다양한 단위 변환 도구</description>
+            <link>https://onggeulda-skills-lab.com/ko/tools/unit-converter.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/tools/unit-converter.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>창작 도구</category>
+        </item>
+        
+        <item>
+            <title>텍스트 변환기</title>
+            <description>다양한 텍스트 변환 및 처리 기능</description>
+            <link>https://onggeulda-skills-lab.com/ko/tools/text-transformer.html</link>
+            <guid>https://onggeulda-skills-lab.com/ko/tools/text-transformer.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>창작 도구</category>
+        </item>
+    </channel>
+</rss>

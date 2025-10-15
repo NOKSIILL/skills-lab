@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Onggeulda Skills Lab</title>
+        <description>All-in-one web application providing FPS aim training, reaction speed tests, memory games, color matching games and various creative tools</description>
+        <link>https://onggeulda-skills-lab.com/en/</link>
+        <language>en</language>
+        <atom:link href="https://onggeulda-skills-lab.com/feed-en.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 15 Oct 2025 10:00:00 GMT</lastBuildDate>
+        <generator>Onggeulda Skills Lab</generator>
+        <category>Games</category>
+        <category>Creative Tools</category>
+        
+        <!-- Games Section -->
+        <item>
+            <title>FPS Aim Trainer</title>
+            <description>Target clicking game for improving reaction speed and accuracy</description>
+            <link>https://onggeulda-skills-lab.com/en/games/fps-aim.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/games/fps-aim.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Games</category>
+        </item>
+        
+        <item>
+            <title>Reaction Speed Test</title>
+            <description>Game for measuring instant reaction capabilities</description>
+            <link>https://onggeulda-skills-lab.com/en/games/reaction-test.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/games/reaction-test.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Games</category>
+        </item>
+        
+        <item>
+            <title>Memory Game</title>
+            <description>Card matching game for memory and focus training</description>
+            <link>https://onggeulda-skills-lab.com/en/games/memory-game.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/games/memory-game.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Games</category>
+        </item>
+        
+        <item>
+            <title>Color Matching Game</title>
+            <description>Color matching game for improving color sense and observation skills</description>
+            <link>https://onggeulda-skills-lab.com/en/games/color-match.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/games/color-match.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Games</category>
+        </item>
+        
+        <!-- Creative Tools Section -->
+        <item>
+            <title>Color Palette Generator</title>
+            <description>Generate beautiful color combinations for creativity</description>
+            <link>https://onggeulda-skills-lab.com/en/tools/color-palette.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/tools/color-palette.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Creative Tools</category>
+        </item>
+        
+        <item>
+            <title>Keyword Tool</title>
+            <description>Generate random keywords for creative inspiration</description>
+            <link>https://onggeulda-skills-lab.com/en/tools/keywords.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/tools/keywords.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Creative Tools</category>
+        </item>
+        
+        <item>
+            <title>Unit Converter</title>
+            <description>Various unit conversion tools for design work</description>
+            <link>https://onggeulda-skills-lab.com/en/tools/unit-converter.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/tools/unit-converter.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Creative Tools</category>
+        </item>
+        
+        <item>
+            <title>Text Transformer</title>
+            <description>Various text conversion and processing functions</description>
+            <link>https://onggeulda-skills-lab.com/en/tools/text-transformer.html</link>
+            <guid>https://onggeulda-skills-lab.com/en/tools/text-transformer.html</guid>
+            <pubDate>Sun, 15 Sep 2025 10:00:00 GMT</pubDate>
+            <category>Creative Tools</category>
+        </item>
+    </channel>
+</rss>
