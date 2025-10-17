@@ -15,7 +15,7 @@
     "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
     "image": "/assets/images/og-image.jpg",
     "url": "https://onggeulda-skills-lab.com/",
-    "locale": "ko"
+    "locale": "ko_KR"
   },
   "twitter": {
     "card": "summary_large_image",
@@ -23,7 +23,7 @@
     "creator": "@onggeulda_studio",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
     "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
-    "image": "/assets/images/twitter-card.jpg"
+    "image": "https://onggeulda-skills-lab.com/assets/images/twitter-card.jpg"
   },
   "structuredData": {
     "@context": "https://schema.org",
