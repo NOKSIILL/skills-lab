@@ -1,36 +1,36 @@
 {
   "defaultMeta": {
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
-    "description": "FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 등 다양한 게임과 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 창작 도구를 무료로 제공합니다.",
-    "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 메모리 게임, 색깔 맞추기, 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 창작 도구, 무료 게임, 온라인 게임, 브라우저 게임",
+    "description": "Onggeulda Skills Lab: 일상적인 게임 스킬 트레이닝과 창작 도구를 제공하는 웹사이트. FPS 에임 훈련, 반응속도 게임, 메모리 게임과 색상 팔레트, 단위 변환기 등 다양한 도구 제공. 회원가입 없이 무료로 이용하세요.",
+    "keywords": "FPS 게임, 에임 훈련, 반응속도 테스트, 메모리 게임, 창작 도구, FPS 게임 연습, 무료 게임, 온라인 게임, 브라우저 게임, 색상 팔레트",
     "author": "Onggeulda Studio",
     "robots": "index, follow",
-    "viewport": "width=device-width, initial-scale=1.0",
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
     "theme-color": "#00ff88"
   },
   "openGraph": {
     "type": "website",
     "site_name": "Onggeulda Skills Lab",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
-    "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
-    "image": "assets/images/og-image.jpg",
-    "url": "",
-    "locale": "ko_KR"
+    "description": "Onggeulda Skills Lab: 게임 실력 향상과 창작을 위한 다양한 도구를 제공하는 웹사이트입니다. 회원가입 없이 무료로 이용하세요.",
+    "image": "/assets/images/og-image.jpg",
+    "url": "https://onggeulda-skills-lab.com/",
+    "locale": "ko"
   },
   "twitter": {
     "card": "summary_large_image",
     "site": "@onggeulda_skill_lab",
     "creator": "@onggeulda_studio",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
-    "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
-    "image": "assets/images/twitter-card.jpg"
+    "description": "Onggeulda Skills Lab: 게임 실력 향상과 창작을 위한 다양한 도구를 제공하는 웹사이트입니다. 회원가입 없이 무료로 이용하세요.",
+    "image": "/assets/images/twitter-card.jpg"
   },
   "structuredData": {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Onggeulda Skills Lab",
-    "description": "FPS 에임 훈련과 창작 도구를 제공하는 웹 애플리케이션",
-    "url": "https://onggeulda-skills-lab.com",
+    "description": "FPS 에임 훈련과 창작 도구(색상 팔레트, 키워드 생성기, 단위 변환기 등)를 제공하는 웹 애플리케이션",
+    "url": "https://onggeulda-skills-lab.com/",
     "applicationCategory": "Game",
     "operatingSystem": "Web Browser",
     "offers": {
@@ -50,20 +50,80 @@
     ]
   },
   "pageSpecific": {
+    "home": {
+      "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
+      "description": "Onggeulda Skills Lab: 일상적인 게임 스킬 트레이닝과 창작 도구를 제공하는 웹사이트. FPS 에임 훈련, 반응속도 게임, 메모리 게임과 색상 팔레트, 단위 변환기 등 다양한 도구 제공. 회원가입 없이 무료로 이용하세요.",
+      "keywords": "FPS 게임, 에임 훈련, 반응속도 테스트, 메모리 게임, 창작 도구, 색상 팔레트, 단위 변환기"
+    },
     "games": {
       "title": "게임 - Onggeulda Skills Lab",
       "description": "FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 등 다양한 온라인 게임을 즐기세요.",
-      "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 메모리 게임, 색깔 맞추기, 시각 훈련, 두뇌 훈련"
+      "keywords": "온라인 게임, FPS 게임, 반응속도 게임, 메모리 게임, 브라우저 게임"
+    },
+    "fpsAim": {
+      "title": "FPS 에임 훈련 - Onggeulda Skills Lab",
+      "description": "FPS 게임 실력 향상을 위한 에임 훈련 게임. 반응속도와 정확도를 개선하세요.",
+      "keywords": "FPS 게임, 에임 훈련, 반응속도, 정확도, 온라인 게임"
+    },
+    "reactionTest": {
+      "title": "반응속도 테스트 - Onggeulda Skills Lab",
+      "description": "순간 반응 능력을 측정하고 개선할 수 있는 반응속도 테스트 게임",
+      "keywords": "반응속도, 반응속도 테스트, 순간 반응, 반사신경, 온라인 게임"
+    },
+    "memoryGame": {
+      "title": "메모리 게임 - Onggeulda Skills Lab",
+      "description": "기억력과 집중력 훈련을 위한 카드 매칭 메모리 게임",
+      "keywords": "메모리 게임, 기억력, 집중력, 카드 매칭, 두뇌 훈련"
+    },
+    "colorMatch": {
+      "title": "색깔 맞추기 - Onggeulda Skills Lab",
+      "description": "색감과 관찰력 향상을 위한 색상 매칭 게임",
+      "keywords": "색깔 맞추기, 색감, 관찰력, 색상 매칭, 시각 훈련"
     },
     "tools": {
       "title": "창작 도구 - Onggeulda Skills Lab",
-      "description": "색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 창작 도구를 제공합니다.",
-      "keywords": "색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 디자인 도구, 창작 도구"
+      "description": "색상 팔레트 생성기, 키워드 생성기, 단위 변환기, 텍스트 변환기 등 유용한 창작 도구들",
+      "keywords": "창작 도구, 색상 팔레트, 키워드 생성기, 단위 변환기, 텍스트 변환기, 디자인 도구"
+    },
+    "colorPalette": {
+      "title": "색상 팔레트 생성기 - Onggeulda Skills Lab",
+      "description": "창작을 위한 아름다운 색상 조합을 생성하는 도구",
+      "keywords": "색상 팔레트, 색상 생성기, 디자인 도구, 창작 도구, 컬러 팔레트"
+    },
+    "keywords": {
+      "title": "오늘의 키워드 - Onggeulda Skills Lab",
+      "description": "창작 영감을 위한 랜덤 키워드 생성 도구",
+      "keywords": "키워드 생성기, 창작 영감, 랜덤 키워드, 아이디어, 브레인스토밍"
+    },
+    "unitConverter": {
+      "title": "단위 변환기 - Onggeulda Skills Lab",
+      "description": "디자인 작업용 다양한 단위 변환 도구",
+      "keywords": "단위 변환기, 픽셀 변환, 디자인 도구, 단위 계산, px pt em rem"
+    },
+    "textTransformer": {
+      "title": "텍스트 변환기 - Onggeulda Skills Lab",
+      "description": "다양한 텍스트 변환 및 처리 기능을 제공하는 도구",
+      "keywords": "텍스트 변환기, 텍스트 변환, 문자열 처리, 대소문자 변환, 공백 제거"
     },
     "about": {
-      "title": "소개 및 정책 - Onggeulda Skills Lab",
-      "description": "Onggeulda Skills Lab은 재미있는 게임과 유용한 창작 도구를 한 곳에서 제공하는 웹사이트입니다. 개인정보처리방침, 이용약관 등 정책 정보를 확인하세요.",
-      "keywords": "게임 허브, 소개, 개인정보처리방침, 이용약관, 웹 게임, 온라인 도구"
+      "title": "소개 - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab은 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구를 제공하는 웹사이트입니다.",
+      "keywords": "스킬 트레이닝, 온라인 게임, 창작 도구, 웹 애플리케이션"
+    },
+    "contact": {
+      "title": "문의하기 - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab에 대한 문의사항이나 건의사항을 보내주세요.",
+      "keywords": "문의하기, 연락처, 피드백, 건의사항, 고객지원"
+    },
+    "privacy": {
+      "title": "개인정보처리방침 - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab의 개인정보처리방침",
+      "keywords": "개인정보처리방침, 개인정보보호, 이용약관, 프라이버시"
+    },
+    "terms": {
+      "title": "이용약관 - Onggeulda Skills Lab",
+      "description": "Onggeulda Skills Lab 서비스 이용약관",
+      "keywords": "이용약관, 서비스 약관, 이용규칙, 약관동의"
     }
   }
 }

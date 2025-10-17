@@ -5,7 +5,7 @@
         <description>FPS 에임 훈련, 반응속도 테스트, 메모리 게임, 색깔 맞추기 게임과 다양한 창작 도구를 제공하는 올인원 웹 애플리케이션입니다.</description>
         <link>https://onggeulda-skills-lab.com/ko/</link>
         <language>ko</language>
-        <atom:link href="https://onggeulda-skills-lab.com/feed-ko.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://onggeulda-skills-lab.com/rss-ko.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sun, 15 Oct 2025 10:00:00 GMT</lastBuildDate>
         <generator>Onggeulda Skills Lab</generator>
         <category>게임</category>

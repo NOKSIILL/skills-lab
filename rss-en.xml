@@ -5,7 +5,7 @@
         <description>All-in-one web application providing FPS aim training, reaction speed tests, memory games, color matching games and various creative tools</description>
         <link>https://onggeulda-skills-lab.com/en/</link>
         <language>en</language>
-        <atom:link href="https://onggeulda-skills-lab.com/feed-en.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://onggeulda-skills-lab.com/rss-en.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sun, 15 Oct 2025 10:00:00 GMT</lastBuildDate>
         <generator>Onggeulda Skills Lab</generator>
         <category>Games</category>

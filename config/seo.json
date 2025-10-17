@@ -5,7 +5,7 @@
     "keywords": "FPS 게임, 에임 훈련, 반응속도 게임, 온라인 게임, 무료 게임, 클릭 게임, 창작 도구, 색상 팔레트",
     "author": "Onggeulda Studio",
     "robots": "index, follow",
-    "viewport": "width=device-width, initial-scale=1.0",
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
     "theme-color": "#00ff88"
   },
   "openGraph": {
@@ -13,9 +13,9 @@
     "site_name": "Onggeulda Skills Lab",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
     "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
-    "image": "assets/images/og-image.jpg",
-    "url": "",
-    "locale": "ko_KR"
+    "image": "/assets/images/og-image.jpg",
+    "url": "https://onggeulda-skills-lab.com/",
+    "locale": "ko"
   },
   "twitter": {
     "card": "summary_large_image",
@@ -23,14 +23,14 @@
     "creator": "@onggeulda_studio",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
     "description": "Onggeulda Skills Lab: 일상적으로 연습하는 스킬 트레이닝과 간단한 창작 도구.",
-    "image": "assets/images/twitter-card.jpg"
+    "image": "/assets/images/twitter-card.jpg"
   },
   "structuredData": {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Onggeulda Skills Lab",
     "description": "FPS 에임 훈련과 창작 도구를 제공하는 웹 애플리케이션",
-    "url": "https://onggeulda-skills-lab.com",
+    "url": "https://onggeulda-skills-lab.com/",
     "applicationCategory": "Game",
     "operatingSystem": "Web Browser",
     "offers": {

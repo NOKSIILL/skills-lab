@@ -5,7 +5,7 @@
     "keywords": "FPS game, aim training, reaction speed game, memory game, color match, color palette, keyword generator, unit converter, text transformer, creative tools, online game, free game, browser game",
     "author": "Onggeulda Studio",
     "robots": "index, follow",
-    "viewport": "width=device-width, initial-scale=1.0",
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
     "theme-color": "#00ff88"
   },
   "openGraph": {
@@ -13,9 +13,9 @@
     "site_name": "Onggeulda Skills Lab",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
     "description": "Onggeulda Skills Lab: Daily skill training and creative tools. FPS Aim Trainer, Reaction Test, Memory Game, Color Match and more.",
-    "image": "assets/images/og-image.jpg",
-    "url": "https://onggeulda-skills-lab.com/en/",
-    "locale": "en_EN"
+    "image": "/assets/images/og-image.jpg",
+    "url": "https://onggeulda-skills-lab.com/",
+    "locale": "en"
   },
   "twitter": {
     "card": "summary_large_image",
@@ -23,14 +23,14 @@
     "creator": "@onggeulda_studio",
     "title": "Onggeulda Skills Lab — Daily Skill Practice & Tools",
     "description": "Onggeulda Skills Lab: Daily skill training and creative tools. FPS Aim Trainer, Reaction Test, Memory Game, Color Match and more.",
-    "image": "assets/images/twitter-card.jpg"
+    "image": "/assets/images/twitter-card.jpg"
   },
   "structuredData": {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Onggeulda Skills Lab",
     "description": "Web application providing FPS aim training, reaction test, memory game, color match, and creative tools.",
-    "url": "https://onggeulda-skills-lab.com/en/",
+    "url": "https://onggeulda-skills-lab.com/",
     "applicationCategory": "Game",
     "operatingSystem": "Web Browser",
     "offers": {
