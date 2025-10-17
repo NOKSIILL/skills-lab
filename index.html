@@ -76,31 +76,35 @@
         // 언어 감지 로직
         function detectLanguage() {
           const urlParams = new URLSearchParams(window.location.search);
-          const urlLang = urlParams.get("lang");
-          const savedLang = localStorage.getItem("userLanguage");
-          const browserLang = navigator.language || navigator.userLanguage;
+          const urlLang = (urlParams.get("lang") || "").toLowerCase();
+          const savedLang = (
+            localStorage.getItem("userLanguage") || ""
+          ).toLowerCase();
+          const browserLang = (
+            navigator.language ||
+            navigator.userLanguage ||
+            ""
+          ).toLowerCase();
 
-          let targetLang = "ko"; // 기본값: 한국어
-
-          // 우선순위: URL > 저장된 설정 > 브라우저 언어
-          if (urlLang === "ko") {
-            targetLang = "ko";
-            localStorage.setItem("userLanguage", targetLang);
-          } else if (savedLang === "ko") {
-            targetLang = "ko";
-          } else if (browserLang && browserLang.startsWith("ko")) {
-            targetLang = "ko";
+          // 우선순위: URL > 저장된 설정 > 브라우저 언어 > 기본(en)
+          if (urlLang === "ko" || urlLang === "en") {
+            localStorage.setItem("userLanguage", urlLang);
+            return urlLang;
           }
+          if (savedLang === "ko" || savedLang === "en") return savedLang;
+          if (browserLang.startsWith("ko")) return "ko";
+          if (browserLang.startsWith("en")) return "en";
 
-          return targetLang;
+          return "en";
         }
 
         const targetLang = detectLanguage();
 
         // 개발 모드가 아니거나 운영 모드가 강제된 경우 즉시 리다이렉트
         if (!isDev || isProdForced) {
-          // 현재 한국어만 지원하므로 /ko/로 리다이렉트
-          window.location.replace("/ko/");
+          localStorage.setItem("userLanguage", targetLang);
+          const redirectPath = targetLang === "en" ? "/en/" : "/ko/";
+          window.location.replace(redirectPath);
           return;
         }
 
@@ -380,7 +384,6 @@
           const savedLang = localStorage.getItem("userLanguage");
           const browserLang = navigator.language || navigator.userLanguage;
 
-          // 현재는 한국어만 지원
           const targetLang = "ko";
 
           // 언어 설정 저장
@@ -408,7 +411,7 @@
         <h1>Onggeulda Skills Lab</h1>
         <p>
           JavaScript가 비활성화되어 있습니다.
-          <a href="/ko/" style="color: #00ff88">한국어 사이트로 이동</a>
+          <a href="/en/" style="color: #00ff88">한국어 사이트로 이동</a>
         </p>
       </div>
     </noscript>
@@ -421,12 +424,7 @@
         "name": "Onggeulda Skills Lab",
         "description": "반응속도, 기억력, 색감 등 다양한 능력을 측정하고 향상시킬 수 있는 게임과 도구를 제공합니다.",
         "url": "https://onggeulda-skills-lab.com/",
-        "inLanguage": "ko-KR",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://onggeulda-skills-lab.com/ko/?search={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "inLanguage": "en_US"
       }
     </script>
   </body>
