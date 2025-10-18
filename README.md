@@ -299,14 +299,6 @@ text
 
 ## 📞 연락처
 
-- **이메일**: your-email@example.com
-- **GitHub**: https://github.com/your-username
-- **웹사이트**: https://your-website.com
-
-## 🙏 감사의 글
-
-이 프로젝트를 만드는데 도움을 주신 모든 분들께 감사드립니다.
-
----
-
-**⭐ 이 프로젝트가 유용하다면 스타를 눌러주세요!**
+- **이메일**: onggeulda@onggeulda-studio.com
+- **GitHub**: https://github.com/NOKSIILL
+- **웹사이트**: https://onggeulda-studio.com
